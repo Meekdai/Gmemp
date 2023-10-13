@@ -27,7 +27,12 @@ let request=new XMLHttpRequest();
 request.open("GET",requestJson);
 request.responseType='text';
 request.send();
-request.onload=function(){track_list=JSON.parse(request.response);console.log(track_list);}
+request.onload=function(){
+  track_list=JSON.parse(request.response);
+  console.log(track_list);
+  // Load the first track in the tracklist
+  loadTrack(track_index);
+}
 
 function random_bg_color() {
 
@@ -49,8 +54,7 @@ function loadTrack(track_index) {
   curr_track.src = track_list[track_index].mp3;
   curr_track.load();
 
-  // track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
-  document.body.style.backgroundImage = "url(" + track_list[track_index].pic + ")";
+  track_art.style.backgroundImage = "url(" + track_list[track_index].pic + ")";
   track_name.textContent = track_list[track_index].title;
   track_artist.textContent = track_list[track_index].artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
@@ -65,9 +69,6 @@ function resetValues() {
   total_duration.textContent = "00:00";
   seek_slider.value = 0;
 }
-
-// Load the first track in the tracklist
-loadTrack(track_index);
 
 function playpauseTrack() {
   if (!isPlaying) playTrack();
