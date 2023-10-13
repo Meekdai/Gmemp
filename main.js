@@ -20,26 +20,14 @@ let updateTimer;
 let curr_track = document.createElement('audio');
 
 // Define the tracks that have to be played
-let track_list = [
-  {
-    name: "Night Owl",
-    artist: "Broke For Free",
-    image: "https://images.pexels.com/photos/2264753/pexels-photo-2264753.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/WFMU/Broke_For_Free/Directionless_EP/Broke_For_Free_-_01_-_Night_Owl.mp3"
-  },
-  {
-    name: "同桌的你",
-    artist: "老狼",
-    image: "https://music.meekdai.com/media/同桌的你.jpg",
-    path: "https://music.meekdai.com/media/同桌的你.mp3"
-  },
-  {
-    name: "Shipping Lanes",
-    artist: "Chad Crouch",
-    image: "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3",
-  },
-];
+let track_list = [];
+
+let requestJson="http://music.meekdai.com/memp.json"
+let request=new XMLHttpRequest();
+request.open("GET",requestJson)
+request.responseType='text';
+request.send()
+request.onload=function(){track_list=JSON.parse(request.response);}
 
 function random_bg_color() {
 
@@ -58,11 +46,12 @@ function random_bg_color() {
 function loadTrack(track_index) {
   clearInterval(updateTimer);
   resetValues();
-  curr_track.src = track_list[track_index].path;
+  curr_track.src = track_list[track_index].mp3;
   curr_track.load();
 
-  track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
-  track_name.textContent = track_list[track_index].name;
+  // track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
+  document.body.style.backgroundImage = "url(" + track_list[track_index].pic + ")";
+  track_name.textContent = track_list[track_index].title;
   track_artist.textContent = track_list[track_index].artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
