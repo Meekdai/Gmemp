@@ -28,10 +28,10 @@ let track_list = [
     path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/WFMU/Broke_For_Free/Directionless_EP/Broke_For_Free_-_01_-_Night_Owl.mp3"
   },
   {
-    name: "Enthusiast",
-    artist: "Tours",
-    image: "https://music.meekdai.com/media/同桌的你.mp3",
-    path: "https://music.meekdai.com/media/同桌的你.jpg"
+    name: "同桌的你",
+    artist: "老狼",
+    image: "https://music.meekdai.com/media/同桌的你.jpg",
+    path: "https://music.meekdai.com/media/同桌的你.mp3"
   },
   {
     name: "Shipping Lanes",
