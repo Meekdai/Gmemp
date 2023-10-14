@@ -1,451 +1,466 @@
 [
     {
-        "title": "第000期  原神Disco",
-        "artist": "圣剑少女の爱",
-        "mp3": "https://music.meekdai.com/media/000.mp3",
-        "pic":"https://music.meekdai.com/media/000.jpg",
-        "date":"2021年12月29号 晴",
-        "article":"<p>MEMP V2版本新增，确保列表是从0开始的</p>"
-    },
-    {
         "title": "第001期 同桌的你",
         "artist": "老狼",
-        "mp3": "https://music.meekdai.com/media/同桌的你.mp3",
-        "pic":"https://music.meekdai.com/media/同桌的你.jpg",
+        "mp3": "同桌的你.mp3",
+        "pic":"同桌的你.jpg",
         "date":"2014年6月6号 阴天",
         "article":"<p>一直想自己写一个独特的wordpress主题，今天终于如愿了！虽然今天好像有点感冒发烧了，但还是凭着那么一点点信念粗略的完成了。现在展现在大家面前的就是MEMP V1.0版本，我会继续完善下去。明天就是高考了，回想起来就好像是昨天，一首老狼的《同桌的你》献给大家！</p>"
     },
     {
         "title": "第002期 bing bing",
         "artist": "crayon pop",
-        "mp3": "https://music.meekdai.com/media/bing%20bing.mp3",
-        "pic":"https://music.meekdai.com/media/bing%20bing.jpg",
+        "mp3": "bing bing.mp3",
+        "pic":"bing bing.jpg",
         "date":"2014年6月6号 晚上",
         "article":"<p>刚刚睡了一觉，感觉好多了，还是摸索着趴起来再更新一期。迷迷糊糊的，给大家听一首crayon pop的《bing bing》，很有节奏感哦！</p>"
     },
     {
         "title": "第003期 Malaysia Chabor",
         "artist": "Joyce Chu（四叶草）",
-        "mp3": "https://music.meekdai.com/media/003.mp3",
-        "pic":"https://music.meekdai.com/media/003.jpg",
+        "mp3": "Malaysia Chabor.mp3",
+        "pic":"Malaysia Chabor.jpg",
         "date":"2014年6月7号 阴天",
         "article":"<p>最近爆红的马来西亚华人女孩 Joyce Chu（四叶草）你听过她那首《Malaysia Chabor》了吗？可爱到爆~</p>"
     },
     {
         "title": "第004期 COME工作室专版",
         "artist": "Geekdai",
-        "mp3": "https://music.meekdai.com/media/004.mp3",
-        "pic":"https://music.meekdai.com/media/004.jpg",
+        "mp3": "COME工作室专版.mp3",
+        "pic":"COME工作室专版.jpg",
         "date":"日期无记录",
         "article":"<p>Creative 有创造力的</p><p>Open 开放的</p><p>Mechanical 机械</p><p>Electronic 电子</p><p>有创造力的开放的机械电子工作室！</p><p><del>工作室网站：<a href=\"http://djydiy.com\">www.djydiy.com</a></del></p>"
     },
     {
         "title": "第005期 Young For You",
         "artist": "GALA",
-        "mp3": "https://music.meekdai.com/media/005.mp3",
-        "pic":"https://music.meekdai.com/media/005.jpg",
+        "mp3": "Young Fo You.mp3",
+        "pic":"Young For You.jpg",
         "date":"2014年6月12号 晴",
         "article":"<p>MEMP主题已经更新到了1.5版本（感谢senx大神的指导），虽然还是不够完善但我相信，坚持下去，它一定会变的很完美！最近没日没夜的做课程设计，想想一个轴承校核出来竟然有5000多年的寿命我就想笑，2张A1大的图纸等着我画呢，忙死了，但是晚上还是要逃回来看看网站，修改一下。其实在这里发表一些东西也挺好的，不受限制，无拘无束。最后这首《Young For You》很有喜感啊！</p>"
     },
     {
         "title": "第006期 七里香",
         "artist": "周玥（中国好学姐）",
-        "mp3": "https://music.meekdai.com/media/006.mp3",
-        "pic":"https://music.meekdai.com/media/006.jpg",
+        "mp3": "七里香.mp3",
+        "pic":"七里香.jpg",
         "date":"2014年6月15号  大太阳热死了",
         "article":"<p>其实我是个闲不住的人，今天晚上难得休息一下，但是把一些空间微博都刷了一下之后我就发现，我竟然对着电脑发呆了好几分钟，于是就再更新一期图志吧！把图片和MP3放在SAE的storage里面我的云豆有点hold不住了，所以果断用上七牛云储存，每个月10G的免费流量，现在用用应该绰绰有余了！这几天世界杯开始了，我也在百度首页押了几把呼呼，还都是赢的，大黄买彩票竟然赢了20+RMB虽然没有通宵看世界杯的热情，但是大家都关注的事情多了解一点也是有好处的。好吧，一首中国好学姐周玥的《七里香》送给大家，降降温！</p>"
     },
     {
         "title": "第007期 闪着泪光的决定",
         "artist": "吴佩慈",
-        "mp3": "https://music.meekdai.com/media/007.mp3",
-        "pic":"https://music.meekdai.com/media/007.jpg",
+        "mp3": "闪着泪光的决定.mp3",
+        "pic":"闪着泪光的决定.jpg",
         "date":"2014年6月19号 晴",
         "article":"<p>机械设计课程设计已经第11天了，明天应该可以答辩，希望马上结束吧！这几天的机械设计也不是什么都没学到，至少我发现了SolidWorks真不好用看了林胖子用SolidEdge，真是爽啊马上动手，昨天因为出去吃饭了，回来的时候大黄已经安装好了今天用SolidEdge画工程图果然好用！7月初就要去宇视实习了，想想有点小激动，和高考结束准备上大学时的心情差不多吧。吴佩慈的一首《闪着泪光的决定》，小节奏，乐观积极！</p>"
     },
     {
         "title": "第008期 bar bar bar",
         "artist": "crayon pop",
-        "mp3": "https://music.meekdai.com/media/008.mp3",
-        "pic":"https://music.meekdai.com/media/008.jpg",
+        "mp3": "bar bar bar.mp3",
+        "pic":"bar bar bar.jpg",
         "date":"2014年6月24号 阴天",
         "article":"<p>我们还太年轻，滨江租了房子，没有签合同，第二天就打电话说不租给我们了，然后就没有然后了。</p><p>我们很努力的，为期14天的课程设计终于结束了，在昨天下午通过了老师的答辩，高兴！</p><p>我们都很晚睡，足球其实我一点也不喜欢，看着一群人跑来跑去，半天踢不进一个球。</p><p>我们擅长排队，今天早上去了浙江省中医院（下沙分院）做入职体检，看着挂号的人这么多，我很淡定的走开了。</p><p>我们花钱好快，一个箱子400+，一箱干货150，一条耳机58。</p><p>我们不用小米，恢复出厂设置、刷系统、堵住降噪MIC、开关扬声器...都已经阻止不了它没有声音的现实！</p><p>所以我们只能，<font color=#CD93DC>bar </font><font color=#FFFF66>bar </font><font color=#CC000C>bar</font> ......</p>"
     },
     {
         "title": "第009期 夏日协奏",
         "artist": "林逸欣",
-        "mp3": "https://music.meekdai.com/media/009.mp3",
-        "pic":"https://music.meekdai.com/media/009.jpg",
+        "mp3": "夏日协奏.mp3",
+        "pic":"夏日协奏.jpg",
         "date":"2014年7月26号 大雨",
         "article":"<p>因为上班的原因，已经一个月没有更新了。第一次脱离了学校，来到公司，此时的感觉可以用一位同学博客中提到的一句话：<font color=#ED5539>那种一直追逐的爱好变成了职业的不可思议</font>。短短一个月，我学到的是自己在实验室搞一个月所无法比拟的。虽然有时候会很累，有时候会抱怨，虽然天天加班，每天都很晚回来，但是我觉得每一天都过的很充实，每一天都硕果累累。在这炎热的夏天，我们需要静下心来，想一想，大学已经走向尾声，我们需要面对的是整个社会。我，准备好了吗？</p>"
     },
     {
         "title": "第010期 彼岸花",
         "artist": "Geekdai",
-        "mp3": "https://music.meekdai.com/media/010.mp3",
-        "pic":"https://music.meekdai.com/media/010.jpg",
+        "mp3": "彼岸花.mp3",
+        "pic":"彼岸花.jpg",
         "date":"日期无记录",
         "article":"<p>有种花叫做彼岸花，彼岸花开，花、叶两不见，生生世世的分离，各自成岸，各自摆渡了各自生命中泛起浪花的人，匆匆而过，继而匆匆离开，看到的只是遥不可及的对岸，还有站成一岸的人。有些纯粹至极的东西，我们永远只能守望，不能靠近，靠近后便成了庸俗。</p>"
     },
     {
         "title": "第011期 天籁之声",
         "artist": "Geekdai",
-        "mp3": "https://music.meekdai.com/media/011.mp3",
-        "pic":"https://music.meekdai.com/media/011.jpg",
+        "mp3": "天籁之声.mp3",
+        "pic":"天籁之声.jpg",
         "date":"2014年8月24号 晴",
         "article":"<p>静下心来听，可以感受到这个繁华的世界里仅存的宁静。天籁之声，其实是来自我们的内心深处。</p>"
     },
     {
         "title": "第012期 where are you",
         "artist": "Geekdai",
-        "mp3": "https://music.meekdai.com/media/012.mp3",
-        "pic":"https://music.meekdai.com/media/012.jpg",
+        "mp3": "where are you.mp3",
+        "pic":"where are you.jpg",
         "date":"2014年9月7号 晴",
         "article":"<p>明天就是中秋节了，由于各种原因没有回家，看着大家都在家和爸妈一起过中秋真好。记得以前我们家中秋节都是在外婆家过的，外公外婆会烧一大桌子菜，然后把大家都叫过来一起吃一顿，饭后大家一起出去走走看看月亮，广场上应该会有很多人在放飞孔明灯。回想起来，多少有点向往的，大黄也回去，这几天一个人，特别的无聊，本来想回学校看看的，结果工作室的小伙伴们也都回家了。。。where are you ?</p>"
     },
     {
         "title": "第013期 夏天的旋律",
         "artist": "Geekdai",
-        "mp3": "https://music.meekdai.com/media/013.mp3",
-        "pic":"https://music.meekdai.com/media/013.jpg",
+        "mp3": "夏天的旋律.mp3",
+        "pic":"夏天的旋律.jpg",
         "date":"2014年9月12号 雷阵雨",
         "article":"<p>一场大雨把我堵在了公司，又是一个星期五的傍晚，这个时候是最开心的时候，因为周末可以不用早起，晚上可以多做一点自己的事情。但是今天不一样了，整个单板工程部的同事一起明天早起去普陀。本来想着今天可以把空中鼠标的程序给解决的，但是这样看来又要往后拖了。公司的电脑用习惯了，现在看自己的笔记本~~~好小~~好卡，打算必要的时候买一个显示器，如果再有必要的话，自己装一台台式玩玩，以前都是给别人装，配置什么的都大同小异，如果我自己组装的话，肯定搞一台比较牛的。期待~~~~夏天的旋律就这样过去吧 O(∩_∩)O~</p>"
     },
     {
         "title": "第014期 一个人的浪漫",
         "artist": "俞灏明",
-        "mp3": "https://music.meekdai.com/media/014.mp3",
-        "pic":"https://music.meekdai.com/media/014.jpg",
+        "mp3": "一个人的浪漫.mp3",
+        "pic":"一个人的浪漫.jpg",
         "date":"2014年10月05号 晴",
         "article":"<p>国庆在家休息7天，以后很少有这种机会了，过年也只不过放7天，很快就要回去上班了，珍惜这美好的时光~~~稻谷晒在地上，没有以前的金灿灿，但是有一种很充实的感觉。</p>"
     },
     {
         "title": "第015期 一生一世",
         "artist": "邓雨鸿/文卓",
-        "mp3": "https://music.meekdai.com/media/015.mp3",
-        "pic":"https://music.meekdai.com/media/015.jpg",
+        "mp3": "一生一世.mp3",
+        "pic":"一生一世.jpg",
         "date":"2014年10月14号 晴",
         "article":"<p>明天毕业设计开题报告了，以前都是给别人做，现在终于是给自己做了！破天荒的请了3天假，学校好多事情，公司也好多事情，很纠结。。。空中鼠标程序在月初基本完成了，今天又刚刚把PCB画好了，明天准备投板。此生匆匆一望你的音容未改，笑如初生的桃花临风而开——《一生一世》</p><p>吐槽一下，电视剧太狗血，歌不错！</p>"
     },
     {
         "title": "第016期 那些年我一起追过的女孩",
         "artist": "李行亮",
-        "mp3": "https://music.meekdai.com/media/016.mp3",
-        "pic":"https://music.meekdai.com/media/016.jpg",
+        "mp3": "那些年我一起追过的女孩.mp3",
+        "pic":"那些年我一起追过的女孩.jpg",
         "date":"2014年11月22号 晴",
         "article":"<p>那些年，我还什么都不会，仅仅是一个毛头小子。这些年，依旧傻傻看世界，都说智商和情商是互补的关系，但是在我身上，我怎么感觉它两相加永远也不是180度，而只有90度，永远都比别人少一半。</p>"
     },
     {
         "title": "第017期 胡撸胡撸瓢儿",
         "artist": "大张伟",
-        "mp3": "https://music.meekdai.com/media/017.mp3",
-        "pic":"https://music.meekdai.com/media/017.jpg",
+        "mp3": "胡撸胡撸瓢儿.mp3",
+        "pic":"胡撸胡撸瓢儿.jpg",
         "date":"2014年12月14号 晴",
         "article":"<p>MEMP已经脱胎换骨，脱离wordpress，采用HTML+CSS+Javascript+jQuery，数据格式采用Json，都是临时抱佛脚学习的。是不是比以前要漂亮很多呢？我可是通宵了一个周末才搞定的哟！你可以用键盘的上下左右控制音乐播放，空格是暂停，还有回车键是全屏显示哦！<br><font color=#ED5539>求点赞~</font><font color=#46A9F8>求点赞~</font><font color=#FFFF66>求点赞~</font><font color=#CC000C>求点赞~</font><font color=#FF97A0>求点赞~</font><font color=#CD93DC>求点赞~</font></p>"
     },
     {
         "title": "第018期 OK",
         "artist": "草莓牛奶",
-        "mp3": "https://music.meekdai.com/media/018.mp3",
-        "pic":"https://music.meekdai.com/media/018.jpg",
+        "mp3": "OK.mp3",
+        "pic":"OK.jpg",
         "date":"2014年12月21号 晴",
         "article":"<p>这几天在进行<del><a href=\"http://djydiy.com\">COME工作室网站</a></del>的改版，今天不负众望终于完工，在网站一周年前给它换了一件漂亮的衣服。这个周末自己煮了一锅<font color=#ED5539>排骨</font>炖<font color=#FFFF66>豆腐</font>And<font color=#CD93DC>芋艿</font>，味道是非常不错的，可是买的排骨和豆腐略多，吃了我整整2天 o(>_<)o <br> </p>"
     },
 	{
         "title": "第019期  King King King",
         "artist": "Schnuffel",
-        "mp3": "https://music.meekdai.com/media/019.mp3",
-        "pic":"https://music.meekdai.com/media/019.jpg",
+        "mp3": "King King King.mp3",
+        "pic":"King King King.jpg",
         "date":"2014年12月25号 晴",
         "article":"<p>圣诞节一早收到了来自公司的手套，非常实用，对于每天骑车上班的孩子来说，没有什么比手套帽子围巾之类更加合适的了。回想起昨天回住处的公交车上，爷爷还打过来电话，让我注意身体，其他的都不重要，当时没有发现当天是平安夜，现在回想起来，还是挺温馨的。有些时候，我可能会活在自己的世界里，忘记了这个纷繁的世界上，还有自己的家人，自己的朋友。</p><p>平安夜，圣诞老人悄悄的离开了自己的家，给全世界的孩子送去了礼物，但是他却忘记了自己的孩子！</p>"
     },
 	{
         "title": "第020期  Fade",
         "artist": "Alan Walker",
-        "mp3": "https://music.meekdai.com/media/020.mp3",
-        "pic":"https://music.meekdai.com/media/020.jpg",
+        "mp3": "Fade.mp3",
+        "pic":"Fade.jpg",
         "date":"2015年1月25号 阴",
         "article":"<p>以前一直以为我的世界观、人生观、价值观是不会改变的，但是这一个月来，变化真的很大，有些事情可能是命中注定，有些事情可能改变不了。刚刚接触这个纷繁复杂的社会，感觉有点无奈，已经不知道前方在哪里了！有些时候会想，我为什么要来到这个世界？有人告诉我，人到世界上是来接受惩罚的，六道轮回，尝遍人间疾苦。其实也不是不无道理，人生在世，最珍贵的就是那份完整而又残缺的回忆吧！</p><p><font color=#ED5539>有一天早上醒来，我已经不是我自己了，但是我自己却不知道！</font></p>"
     },
 	{
         "title": "第021期  Teenage Life",
         "artist": "Daz Sampson",
-        "mp3": "https://music.meekdai.com/media/021.mp3",
-        "pic":"https://music.meekdai.com/media/021.jpg",
+        "mp3": "Teenage Life.mp3",
+        "pic":"Teenage Life.jpg",
         "date":"2015年1月29号 雨夹雪",
         "article":"<p>今天是这个星期回来最早的一天了，9点骑着单车从万轮出来，地上的积水倒影出泛黄的灯光，有点刺眼。由于伞不是很大，零零星星的雨雪落到左手的手套上，像小时候夜空中闪烁的星星。有时候会觉得自己好可怜，大冬天的晚上应该早早的果在被窝里，看看电视亦或是听听歌。但是只有经历最痛苦的坚持，才能配得上拥有最永久的幸福。</p><p><font color=#E070E4>加油！</font></p>"
     },
 	{
         "title": "第022期  Luv",
         "artist": "Apink",
-        "mp3": "https://music.meekdai.com/media/022.mp3",
-        "pic":"https://music.meekdai.com/media/022.jpg",
+        "mp3": "Luv.mp3",
+        "pic":"Luv.jpg",
         "date":"2015年1月31号 阴",
         "article":"<p>昨天周五一下班，3个小时来回下沙，终于拿到了订购已久的诺基亚N1。晚饭也没有顾上吃，直接上手把玩了一晚上。总的来说非常的不错，铝镁合金的外壳、超薄机身，最喜欢它的Intel处理器，X86下的安卓系统APP支持有待提升！</p>"
     },
 	{
         "title": "第023期  Sugar",
         "artist": "Maroon 5",
-        "mp3": "https://music.meekdai.com/media/023.mp3",
-        "pic":"https://music.meekdai.com/media/023.jpg",
+        "mp3": "Sugar.mp3",
+        "pic":"Sugar.jpg",
         "date":"2015年2月8号 晴",
         "article":"<p>理一理，回家了。最后一个假期了，回家好好陪陪爸妈，以后上班回家的时间就更少了。大学里的象牙塔离我越来越远，而自己还是一个小屁孩，该怎么办呢？<font color=#CD93DC>时间不会因为你的留恋而为你停留，</font>一直觉得这句话说的特别好，时间不是绝对的，当某一天时间不再是时间，它应该就会为我停留了吧！发现有一位同学在微博上分享的MV不错，推荐给大家：<a href=\"http://music.163.com/#/share/mv/35145079/49447192\">《Sugar》</a>很喜欢他的大胡子，有没有感觉很Man？</p><p>昨天又把MEMP休整了一番，点击右下角的<del><a href=\"http://memp.sinaapp.com/main.html\">Meekdai</a></del>会有惊喜哦！</p>"
     },
 	{
         "title": "第024期  Angel ( Radio Edit )",
         "artist": "Dogena",
-        "mp3": "https://music.meekdai.com/media/024.mp3",
-        "pic":"https://music.meekdai.com/media/024.jpg",
+        "mp3": "Angel ( Radio Edit ).mp3",
+        "pic":"Angel ( Radio Edit ).jpg",
         "date":"2015年2月11号 晴",
         "article":"<p><font color=#333399>原来沉默也是一种气质，只是每个人体现的不一样！</font></p><p>回家发现一张<font color=#ffff00>2003</font>年开户的存折，第一笔钱是<font color=#ff0000>130￥</font>，那是小学的时候成功的解算了一道比较难的数学题，爸爸履行承诺给了100的零花钱，然后我从抽屉里面翻出30元，把钱存到银行。以后每过几个月都会往里面存，一直到小学结束，最后的结余写是2000多吧。现在已经没有人用存折了吧，可能有人都没有见过存折长什么样子呢！</p>"
     },
 	{
         "title": "第025期  Number 9",
         "artist": "T Ara",
-        "mp3": "https://music.meekdai.com/media/025.mp3",
-        "pic":"https://music.meekdai.com/media/025.jpg",
+        "mp3": "Number 9.mp3",
+        "pic":"Number 9.jpg",
         "date":"2015年2月16号 晴",
         "article":"<p>今天是个值得纪念的一天，买了meekdai.com域名，更改网名为Meekdai，博客搭建基本完成，就剩下年后备案了，现在访问 <a href=\"http://meek.sinaapp.com\">meek.sinaapp.com</a> 速度还是不错的，但是访问 <a href=\"http://www.meekdai.com\">meekdai.com</a> 需要飞到国外再回来速度感觉有点慢了，所以要抓紧备案。还是要感谢一下卜卜口的博客框架，真的非常赞！</p><p>哈哈，继续改善，相应会越来越好~</p>"
     },
     {
         "title": "第026期  연애의 시작",
         "artist": "杨郑承",
-        "mp3": "https://music.meekdai.com/media/026.mp3",
-        "pic":"https://music.meekdai.com/media/026.jpg",
+        "mp3": "연애의 시작.mp3",
+        "pic":"연애의 시작.jpg",
         "date":"2015年2月19号 晴",
         "article":"<p>新年第一天，祝大家羊年吉祥如意！这是勤劳的中国人民，和家人团圆的日子，感觉20多年来，每次都不一样，而每次都有相同的地方，回想起来还是小时候的年味比较重，和小伙伴一起玩，放鞭炮。现在已经没有了当年的热情，现在的小朋友都不玩了吧，真是嘲讽 OAQ</p><p>现在的时间是丑时，写完这篇json就睡了～</p>"
     },
     {
         "title": "第027期  カノン",
         "artist": "DJ OKAWARI",
-        "mp3": "https://music.meekdai.com/media/027.mp3",
-        "pic":"https://music.meekdai.com/media/027.jpg",
+        "mp3": "カノン.mp3",
+        "pic":"カノン.jpg",
         "date":"2015年2月23号 晴",
         "article":"<p>这首卡农是在萌月的博客中发现的，在网易云音乐中没有找到对应的，所以就只有上传这边了，哈哈！</p><p>突然发现我竟然是初八上班的，果断买上了初七的票，突然多出一天感觉好开心！这几天事情有点多，就这样吧，大家珍惜过年的最后几天！</p>"
     },
     {
         "title": "第028期  미라에게 (致米拉)",
         "artist": "杨郑承",
-        "mp3": "https://music.meekdai.com/media/028.mp3",
-        "pic":"https://music.meekdai.com/media/028.jpg",
+        "mp3": "미라에게 (致米拉).mp3",
+        "pic":"미라에게 (致米拉).jpg",
         "date":"2015年2月27号 雨",
         "article":"<p>大滴大滴的雨水打落在黑色的塑胶地面上，被强行分成若干个小水珠，雨伞形状的弹起又落下。和往常一样，骑着自行车，打着伞，匆匆骑过一个又一个十字路口，但是速度并不能很快，因为向心力的作用，有可能落在身上的雨水会更加多。</p><p>突然发现前面有一只萨摩耶，被雨水夹杂着泥土包裹的已经几乎分辨不出，从它身边骑过，它看了我一眼，我也看了它一眼，当我缓过神停下车，回头发现，那只不过是非常真实的幻觉罢了！！！</p>"
     },
     {
         "title": "第029期  One Sweet Day",
         "artist": "张妍珠",
-        "mp3": "https://music.meekdai.com/media/029.mp3",
-        "pic":"https://music.meekdai.com/media/029.jpg",
+        "mp3": "One Sweet Day.mp3",
+        "pic":"One Sweet Day.jpg",
         "date":"2015年3月5号 雨加雪",
         "article":"<p>元宵节，早上起来竟然在下雪，压抑着好久的心情，顿时转晴。吃了早饭，风驰电掣的往外跑，雪子铺面而来，被打成筛子了(>﹏<)。又看见每天7：56的一辆红头白皮的和谐号驶过滨江，这算是奇葩的火车配比了吧，所以让人记忆深刻！</p><p>公司还算人性化，下午茶是2个甜甜圈加一份酸奶，味道还是不错的。今天准时下班了，然后回来煮了汤圆和水饺，其实今天应该是滚元宵吃的，但是各种麻烦，就直接去超市买了。</p>"
     },
     {
         "title": "第030期  Oops J'Aime Pas L'Anglais !",
         "artist": "Gullia",
-        "mp3": "https://music.meekdai.com/media/030.mp3",
-        "pic":"https://music.meekdai.com/media/030.jpg",
+        "mp3": "Oops Jaime Pas Langlais.mp3",
+        "pic":"Oops Jaime Pas Langlais.jpg",
         "date":"2015年3月27号 雨",
         "article":"<p>冬日的严寒已经过去，温暖的阳光洒向大地，泥土混着青草的香味扑鼻而来，这是春天的味道。路边的迎春花已经不是含苞待放了，而人心中依旧停留在那个美好的冬季。普普通通的一天，只是因为是周五，而过的特别快，特别美好。看着工位上一株多肉植物，一棵仙人树，一丛绿萝，一个不倒翁，几本书，一个杯子，几个水果，一本台历，一部电话，一台电脑，这就构成了过去和未来工作的全部。生活总是要继续，每个人的人生肯定都不一样，没有人会教你如何做。但是，就像逗宇经常说的：<font color=#ED5539>精诚所至，金石为开。</font></p>"
     },
     {
         "title": "第031期  いつも何度でも",
         "artist": "伊藤サチコ",
-        "mp3": "https://music.meekdai.com/media/031.mp3",
-        "pic":"https://music.meekdai.com/media/031.jpg",
+        "mp3": "いつも何度でも.mp3",
+        "pic":"いつも何度でも.jpg",
         "date":"2015年4月6号 雨",
         "article":"<p>昨天回学校住了一个晚上，这可能是在大学宿舍仅有的最后几天，在不久的将来，我就要离开这个花样的世界，面对我的是残酷的现实，它会更加赤裸裸的展示在我面前。</p><p>地铁依旧疾驰在繁华的城市下面，换来的是无尽的黑暗，只有那每个站台上的灯光是唯一的希望。</p>"
     },
     {
         "title": "第032期  未来へ",
         "artist": "Kiroro",
-        "mp3": "https://music.meekdai.com/media/032.mp3",
-        "pic":"https://music.meekdai.com/media/032.jpg",
+        "mp3": "未来へ.mp3",
+        "pic":"未来へ.jpg",
         "date":"2015年4月14号 晴",
         "article":"<p>现在电路城的买家真是原来越弱智了,PCB没有画过，程序没有写过，就来买资料，我要上班的啊，回复不及时，还差评，这不能忍啊！你说还要叫我手把手教你入门么？</p>"
     },
     {
         "title": "第033期  Creepin' Up On You",
         "artist": "Darren Hayes",
-        "mp3": "https://music.meekdai.com/media/033.mp3",
-        "pic":"https://music.meekdai.com/media/033.jpg",
+        "mp3": "Creepin Up On You.mp3",
+        "pic":"Creepin Up On You.jpg",
         "date":"2015年4月19号 阴",
         "article":"<p>人穷尽一生追寻另一个人类，共度一生的事，我一直无法理解，或许我自己太有意思，无需他人陪伴。所以，我祝你们在对方身上得到的快乐，与我给自己的一样多。</p><p><font color=#F62001>One</font> Two ! <font color=#003AAD>One</font> Two <font color=#EB9500>Three</font>  ╮(￣▽￣)╭ </p>"
     },
     {
         "title": "第034期  秋酿",
         "artist": "房东的猫",
-        "mp3": "https://music.meekdai.com/media/034.mp3",
-        "pic":"https://music.meekdai.com/media/034.jpg",
+        "mp3": "秋酿.mp3",
+        "pic":"秋酿.jpg",
         "date":"2015年4月22号 晴",
         "article":"<p>马路边的灌木丛被剪的方方正正，扑鼻而来的抹茶味，轻轻的苦涩中夹杂着些许甜。 </p>"
     },
     {
         "title": "第035期  Moya (모야)",
         "artist": "AOA",
-        "mp3": "https://music.meekdai.com/media/035.mp3",
-        "pic":"https://music.meekdai.com/media/035.jpg",
+        "mp3": "Moya (모야).mp3",
+        "pic":"Moya (모야).jpg",
         "date":"2015年5月3号 晴",
         "article":"<p>上个星期为了解决Mac下Win的问题，搞了好久，已经不想吐槽了，昨天一怒JD下单配了台机箱，外观不错，明天应该会写一篇文章晒晒我的机器。最后一个月了，好迷茫~</p>"
     },
     {
         "title": "第036期  恋爱写真",
         "artist": "大塚愛",
-        "mp3": "https://music.meekdai.com/media/036.mp3",
-        "pic":"https://music.meekdai.com/media/036.jpg",
+        "mp3": "恋爱写真.mp3",
+        "pic":"恋爱写真.jpg",
         "date":"2015年5月22号 晴",
         "article":"<p>生涯ただ一度のキス、ただ一度の恋</p>"
     },
     {
         "title": "第037期  入戏太深",
         "artist": "Cindy 兔子",
-        "mp3": "https://music.meekdai.com/media/037.mp3",
-        "pic":"http://mopicr.lofter.com/post/1c1020_6559236",
+        "mp3": "入戏太深.mp3",
+        "pic":"入戏太深.jpg",
         "date":"2015年5月30号 雨",
         "article":"<p>这几天回家，无聊，学了一下PS，网站都搞这么久了，不会PS也说不过去啊！第一个作品就是把<font color=#8EC7F8>署名-非商业性使用-相同方式共享</font>这3个图片搞在一起，然后换成透明背景！感觉棒棒哒，等把毕业证都P一遍，再传上来 ~ (o^^o)♪</p>"
     },
     {
         "title": "第038期  什么都可以",
         "artist": "黄晓明",
-        "mp3": "https://music.meekdai.com/media/038.mp3",
-        "pic":"https://music.meekdai.com/media/038.jpg",
+        "mp3": "什么都可以.mp3",
+        "pic":"什么都可以.jpg",
         "date":"2015年6月21号 雨",
         "article":"<p>昨天是端午节，今天是父亲节！一年的时间真的就过去了，上个星期五签了劳动合同，可以安心的工作了。</p><p>希望有缘再见到你，一切都会顺利的进行下去的！</p>"
     },
     {
         "title": "第039期  旅路(梦中飞行)",
         "artist": "久石譲",
-        "mp3": "https://music.meekdai.com/media/039.mp3",
-        "pic":"https://music.meekdai.com/media/039.jpg",
+        "mp3": "旅路(梦中飞行).mp3",
+        "pic":"旅路(梦中飞行).jpg",
         "date":"2015年7月4号 雨",
         "article":"<p>创造性的人生为期10年，艺术家或设计师都一样，你也要尽力活出自己的10年。</p>"
     },
     {
         "title": "第040期  Gotta Have You",
         "artist": "The Weepies",
-        "mp3": "https://music.meekdai.com/media/040.mp3",
-        "pic":"https://music.meekdai.com/media/040.jpg",
+        "mp3": "Gotta Have You.mp3",
+        "pic":"Gotta Have You.jpg",
         "date":"2015年7月17号 雷阵雨",
         "article":"<p>雨下了好一会儿，从晚上第一次雷声响起，妞妞就趴在屋里，一步不敢挪。不知道它为啥那么怕雷，估计发誓发多了......（来自<a href=\"http://weibo.com/u/3217179555\">@回忆专用小马甲</a>）</p>"
     },
     {
         "title": "第041期  不怕不怕",
         "artist": "郭美美",
-        "mp3": "https://music.meekdai.com/media/041.mp3",
-        "pic":"https://download.unsplash.com/photo-1438460233291-957406c3337b",
+        "mp3": "不怕不怕.mp3",
+        "pic":"不怕不怕.jpg",
         "date":"日期无记录",
         "article":"<p>备份恢复歌曲</p>"
     },
     {
         "title": "第042期  Happy",
         "artist": "Pharrell",
-        "mp3": "https://music.meekdai.com/media/042.mp3",
-        "pic":"https://music.meekdai.com/media/042.jpg",
+        "mp3": "Happy.mp3",
+        "pic":"Happy.jpg",
         "date":"2015年8月2号 晴",
         "article":"<p>温度高的已经受不了了，上班的时候在公司还好，都是中央空调下面，但是周末就跪了，电脑放在书房没有空调，写个代码热成狗，只能把项目移到笔记本上面，然后躲到空调房里面。又怕冷又怕热，真是个奇怪的家伙！</p>"
     },
     {
         "title": "第043期  天使的翅膀",
         "artist": "徐誉滕",
-        "mp3": "https://music.meekdai.com/media/043.mp3",
-        "pic":"https://music.meekdai.com/media/043.jpg",
+        "mp3": "天使的翅膀.mp3",
+        "pic":"天使的翅膀.jpg",
         "date":"2015年10月12号 晴",
         "article":"<p>转眼已经2个月过去了，这2个月已经偏离自己的轨道很远很远了，不知道是不是对的。上天要玩你真的很简单，很多事情可以在很久以前就埋下伏笔，然后在最后一刻一击必中，打的你再也站不起来！</p>"
     },
 	{
         "title": "第044期  清早听到公鸡叫",
         "artist": "彭野",
-        "mp3": "https://music.meekdai.com/media/044.mp3",
-        "pic":"https://music.meekdai.com/media/044.jpg",
+        "mp3": "清早听到公鸡叫.mp3",
+        "pic":"清早听到公鸡叫.jpg",
         "date":"2015年10月24号 晴",
         "article":"<p>清早听到公鸡叫<font color=#FDB04C>喔喔</font><font color=#F5441E>喔喔喔喔</font>，确实早起有早起的好处，冬天快来了，小伙伴们还是要一如既往的起床哦！早起运动身体好<font color=#7DBAF0>喔喔</font><font color=#AE81E1>喔喔喔喔</font>，身强体健智慧也增高。哈哈，特别是<font color=#FF1E19>智商</font>不够的更要早起。一首非常好听的晨起闹铃，记得点击右下角下载哟~</p>"
     },
     {
         "title": "第045期  星之所在(布鲁斯口琴)",
         "artist": "Various Artists",
-        "mp3": "https://music.meekdai.com/media/045.mp3",
-        "pic":"https://music.meekdai.com/media/045.jpg",
+        "mp3": "星之所在(布鲁斯口琴).mp3",
+        "pic":"星之所在(布鲁斯口琴).jpg",
         "date":"2015年11月21号 小雨",
         "article":"<p>入冬了，又是一年，生活就像柠檬泡水，半片足矣，再多只能品出微苦中强劲的酸。然后，看清、看淡之后，人散雪消花残月阙都与自己不在同一个空间。只愿星稀月小，青灯黄卷，慢慢融入，疏疏酣畅。</p>"
     },
 	{
         "title": "第046期  小幸运",
         "artist": "田馥甄",
-        "mp3": "https://music.meekdai.com/media/046.mp3",
-        "pic":"https://music.meekdai.com/media/046.jpg",
+        "mp3": "小幸运.mp3",
+        "pic":"小幸运.jpg",
         "date":"2016年2月19号 阴",
         "article":"<p>年后上班的第一个星期，感觉自己失去了目标，诚惶诚恐，希望终有一天可以找到！</p>"
     },
     {
         "title": "第047期  A/Z aLIEz",
         "artist": "核爆神曲",
-        "mp3": "https://music.meekdai.com/media/047.mp3",
-        "pic":"https://music.meekdai.com/media/047.jpg",
+        "mp3": "AZ aLIEz.mp3",
+        "pic":"AZ aLIEz.jpg",
         "date":"2016年4月30号 晴",
         "article":"<p>口琴有所提升，但是还是需要继续努力，要玩好一样东西真的挺难的，希望有朝一日可以吹的和大神们一样哦！</p><p>另外，昨天武强竟然捡了一只刺猬，但是今天就放生了，因为它啥也不吃，就缩在纸盒的角落里。</p>"
     },
 	{
         "title": "第048期  secret base ~君が（未闻花名ED）",
         "artist": " 茅野爱衣 户松遥 早见沙织",
-        "mp3": "https://music.meekdai.com/media/048.mp3",
-        "pic":"https://music.meekdai.com/media/048.jpg",
+        "mp3": "secret base ~君が（未闻花名ED）.mp3",
+        "pic":"secret base ~君が（未闻花名ED）.jpg",
         "date":"2016年5月22号 晴",
         "article":"<p>与你在夏末的约定</p><p>将来的梦想,远大的希望不会忘记</p><p>十年后的八月</p><p>我相信我们还能再相见</p><p>怀着最美好的回忆</p>"
     },
     {
         "title": "第049期  温柔的诗 - 翻唱版",
         "artist": "小緣",
-        "mp3": "https://music.meekdai.com/media/049.mp3",
-        "pic":"https://music.meekdai.com/media/049.jpg",
+        "mp3": "温柔的诗 - 翻唱版.mp3",
+        "pic":"温柔的诗 - 翻唱版.jpg",
         "date":"2016年7月11号 雨",
         "article":"<p>这个世界属于有天赋的人，也属于认真的人，更属于那些在有天赋的领域认真钻研的人。</p><p> </p><p>最近做了很多决定，有的可能会影响自己的一身。我想无论对错，在几年之后回想起来，肯定会感谢当初的自己做这样的决定。</p>"
     },
 	{
         "title": "第050期  Calling For Love",
         "artist": "Kamikaze",
-        "mp3": "https://music.meekdai.com/media/050.mp3",
-        "pic":"https://music.meekdai.com/media/050.jpg",
+        "mp3": "Calling For Love.mp3",
+        "pic":"Calling For Love.jpg",
         "date":"2016年11月13号 阴",
         "article":"<p>这是来自5年前的歌，非常的耐听，泰国的歌曲总有一种甜甜的感觉。突然想看一部泰国的电影，像《初恋这件小事》一样！</p>"
     },
     {
         "title": "第051期  The Beginning",
         "artist": "Ryan",
-        "mp3": "https://music.meekdai.com/media/051.mp3",
-        "pic":"https://music.meekdai.com/media/051.jpg",
+        "mp3": "The Beginning.mp3",
+        "pic":"The Beginning.jpg",
         "date":"2017年02月18号 阴",
         "article":"<p>穷尽一生，汇成一曲！</p><p><a href=\"http://weibo.com/tv/v/DvEgCrmif?fid=1034:af0f1e47ff36cf8574c3a856728a8f5a\">视频链接</a></p>"
     },
 	{
         "title": "第052期  似水流年▪逍遥",
         "artist": "魏小涵",
-        "mp3": "https://music.meekdai.com/media/052.mp3",
-        "pic":"https://music.meekdai.com/media/052.jpg",
+        "mp3": "似水流年▪逍遥.mp3",
+        "pic":"似水流年▪逍遥.jpg",
         "date":"2017年11月05号 阴",
         "article":"<p>红红火火，恍恍惚惚，距离上次更新已经有9个月了，之间发生了许许多多的事情。</p><p>最近变成死肥宅，天天看动漫，九公主好美，恩 OωO</p>"
     },
 	{
         "title": "第053期  PDD洪荒之力",
         "artist": "DJ Mr.Zi",
-        "mp3": "https://music.meekdai.com/media/053.mp3",
-        "pic":"https://music.meekdai.com/media/053.jpg",
+        "mp3": "PDD洪荒之力.mp3",
+        "pic":"PDD洪荒之力.jpg",
         "date":"2018年02月16号 小雨",
         "article":"<p>今天是春节，在杭州度过的第一个春节，一个没有鞭炮声的春节。</p><p>这是一首抖音网红歌曲，用在各种世界奇观上，感觉非常震撼，所以就放上来了。</p>"
     },
     {
         "title": "第054期  琵琶行",
         "artist": "奇然 / 沈谧仁",
-        "mp3": "https://music.meekdai.com/media/054.mp3",
-        "pic":"https://music.meekdai.com/media/054.jpg",
+        "mp3": "琵琶行.mp3",
+        "pic":"琵琶行.jpg",
         "date":"2019年01月31号 阴",
         "article":"<p>整整一年没有更新了，当初期待的2018年过去了，平静的过去了。</p><p>明天最后一天上班，然后是9天的寒假。</p>"
     },
     {
         "title": "第055期 一路生花",
         "artist": "温奕心",
-        "mp3": "https://music.meekdai.com/media/055.mp3",
-        "pic":"https://music.meekdai.com/media/055.jpg",
+        "mp3": "一路生花.mp3",
+        "pic":"一路生花.jpg",
         "date":"2021年12月26号 晴",
         "article":"<p>最近更新了一下MEMP V2版本，相比之前添加了歌曲列表，整个UI根据WEUI重写了。</p>"
+    },
+    {
+        "title": "第056期  原神Disco",
+        "artist": "圣剑少女の爱",
+        "mp3": "原神Disco.mp3",
+        "pic":"原神Disco.jpg",
+        "date":"2021年12月29号 晴",
+        "article":"<p>MEMP V2版本新增，确保列表是从0开始的</p>"
+    },
+    {
+        "title": "第057期 破茧",
+        "artist": "张韶涵",
+        "mp3": "破茧.flac",
+        "pic":"破茧.jpg",
+        "date":"2022年01月08号 阴",
+        "article":"<p>斗罗大陆动画OP，17年开始更，每周都准时收看。</p>"
+    },
+    {
+        "title": "第058期 一吻天荒",
+        "artist": "群星",
+        "mp3": "一吻天荒.mp3",
+        "pic":"一吻天荒.jpeg",
+        "date":"2022年03月13号 阴",
+        "article":"<p>神里凌华专属BGM，用PR合成了一下没有remix的完整版。</p><p>谁在寻找大雨滂沱挣脱谁的怀抱</p><p>每分每秒对我都算是煎熬</p><p>谁对谁错爱多爱少不需要再计较</p><p>只是我就这样深爱过</p>"
     }
-
 ]

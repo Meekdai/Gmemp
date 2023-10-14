@@ -22,6 +22,7 @@ let curr_track = document.createElement('audio');
 // Define the tracks that have to be played
 let track_list = [];
 
+let media="https://music.meekdai.com/media/"
 let requestJson="https://music.meekdai.com/memp.json"
 let request=new XMLHttpRequest();
 request.open("GET",requestJson);
@@ -51,10 +52,10 @@ function random_bg_color() {
 function loadTrack(track_index) {
   clearInterval(updateTimer);
   resetValues();
-  curr_track.src = track_list[track_index].mp3;
+  curr_track.src = encodeURI(media+track_list[track_index].mp3);
   curr_track.load();
 
-  track_art.style.backgroundImage = "url(" + track_list[track_index].pic + ")";
+  track_art.style.backgroundImage = "url(" +media+ encodeURI(track_list[track_index].pic) + ")";
   track_name.textContent = track_list[track_index].title;
   track_artist.textContent = track_list[track_index].artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
