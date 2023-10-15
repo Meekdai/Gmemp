@@ -22,7 +22,8 @@ let curr_track = document.createElement('audio');
 // Define the tracks that have to be played
 let track_list = [];
 
-let media="https://music.meekdai.com/media/"
+// let media="https://music.meekdai.com/media/"
+let media="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/media/"
 let requestJson="https://music.meekdai.com/memp.json"
 let request=new XMLHttpRequest();
 request.open("GET",requestJson);
