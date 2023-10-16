@@ -12,7 +12,7 @@ let volume_slider = document.querySelector(".volume_slider");
 let curr_time = document.querySelector(".current-time");
 let total_duration = document.querySelector(".total-duration");
 
-let track_index = 1;
+let track_index = 0;
 let isPlaying = false;
 let updateTimer;
 
@@ -23,8 +23,9 @@ let curr_track = document.createElement('audio');
 let track_list = [];
 
 // let media="https://music.meekdai.com/media/"
+// let requestJson="https://music.meekdai.com/memp.json"
 let media="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/media/"
-let requestJson="https://music.meekdai.com/memp.json"
+let requestJson="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/memp.json"
 let request=new XMLHttpRequest();
 request.open("GET",requestJson);
 request.responseType='text';
