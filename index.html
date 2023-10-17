@@ -1,74 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gmemp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no">
   <link rel="icon" href="https://meekdai.com/favicon.svg">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shikwasa@2.2.0/dist/style.css">
+  <title>Gmemp</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
-
-<style>
-body {background-color:#ededed;}
-/* .imageShow{width:100%;height:100%;background:url(1.png) center center fixed no-repeat;background-size: auto calc(100% - 40px);} */
-
-.imageShow{max-width:1000px;margin:20px auto;}
-.imageShow img{width:100%;}
-
-.musicPlayer{max-width:1000px;margin:auto}
-</style>
-
 <body>
-
-  <div class="imageShow">
-    <img src="1.png">
+  <!-- Top Info -->
+  <div id="title">
+    <span id="track"></span>
+    <div id="timer">0:00</div>
+    <div id="duration">0:00</div>
   </div>
 
-  <div class="musicPlayer"></div>
+  <!-- Controls -->
+  <div class="controlsOuter">
+    <div class="controlsInner">
+      <div id="loading"></div>
+      <div class="btn" id="playBtn"></div>
+      <div class="btn" id="pauseBtn"></div>
+      <div class="btn" id="prevBtn"></div>
+      <div class="btn" id="nextBtn"></div>
+    </div>
+    <div class="btn" id="playlistBtn"></div>
+    <div class="btn" id="volumeBtn"></div>
+  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/shikwasa@2.2.0/dist/shikwasa.min.js"></script>
-<script>
-let playNum=10;
-let imageShow = document.querySelector('.imageShow');
+  <!-- Progress -->
+  <div id="waveform"></div>
+  <div id="bar"></div>
+  <div id="progress"></div>
 
-const player = new Shikwasa.Player({
-  container: document.querySelector('.musicPlayer'),
-  themeColor: '#fd7d7d',
-  download: true,
+  <!-- Playlist -->
+  <div id="playlist">
+    <div id="list"></div>
+  </div>
 
-  audio: {
-    title: 'title',
-    artist: 'artist',
-    cover: 'https://meekdai.com/avatar.svg',
-    src: 'https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/media/Fade.mp3',
-  }
-})
+  <!-- Volume -->
+  <div id="volume" class="fadeout">
+    <div id="barFull" class="bar"></div>
+    <div id="barEmpty" class="bar"></div>
+    <div id="sliderBtn"></div>
+  </div>
 
-let media="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/media/"
-let requestJson="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/memp.json"
-let request=new XMLHttpRequest();
-request.open("GET",requestJson);
-request.responseType='text';
-request.send();
-request.onload=function(){
-    jsonData=JSON.parse(request.response);
-    console.log(jsonData);
-    loadMusic(playNum);
-}
-
-function loadMusic(playNum) {
-  player.update({
-    title:jsonData[playNum].title,
-    artist:jsonData[playNum].artist,
-    cover: 'https://meekdai.com/avatar.svg',
-    src:encodeURI(media+jsonData[playNum].mp3)
-  });
-  // imageShow.img.src=encodeURI(media+jsonData[playNum].pic);
-  // imageShow.style.backgroundImage = "url(" +media+ encodeURI(jsonData[playNum].pic) + ")";
-  // imageShow.childNodes[1].src=encodeURI(media+jsonData[playNum].pic);
-}
-
-</script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/howler@2.2.4/dist/howler.min.js"></script>
+  <script src="./siriwave.js"></script>
+  <script src="./player.js"></script>
 </body>
 </html>
