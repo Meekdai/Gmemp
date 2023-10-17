@@ -11,20 +11,25 @@
 
 <style>
 body {background-color:#ededed;}
-.page{display: flex;flex-direction: column;height:100vh;}
-.imageShow{width:100%;height:100%;background:url(http://img.w3cschool.cn/attachments/knowledge/201610/14632.png) no-repeat;}
-.musicPlayer{margin: auto 20px;}
+/* .imageShow{width:100%;height:100%;background:url(1.png) center center fixed no-repeat;background-size: auto calc(100% - 40px);} */
+
+.imageShow{max-width:1000px;margin:20px auto;}
+.imageShow img{width:100%;}
+
+.musicPlayer{max-width:1000px;margin:auto}
 </style>
 
 <body>
-<div class="page">
-<div class="imageShow"></div>
-<div class="musicPlayer"></div>
-</div>
+
+  <div class="imageShow">
+    <img src="1.png">
+  </div>
+
+  <div class="musicPlayer"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/shikwasa@2.2.0/dist/shikwasa.min.js"></script>
 <script>
-let playNum=0;
+let playNum=10;
 let imageShow = document.querySelector('.imageShow');
 
 const player = new Shikwasa.Player({
@@ -59,8 +64,9 @@ function loadMusic(playNum) {
     cover: 'https://meekdai.com/avatar.svg',
     src:encodeURI(media+jsonData[playNum].mp3)
   });
-  // imageShow.src=encodeURI(media+jsonData[playNum].pic);
-  imageShow.style.backgroundImage = "url(" +media+ encodeURI(jsonData[playNum].pic) + ")";
+  // imageShow.img.src=encodeURI(media+jsonData[playNum].pic);
+  // imageShow.style.backgroundImage = "url(" +media+ encodeURI(jsonData[playNum].pic) + ")";
+  // imageShow.childNodes[1].src=encodeURI(media+jsonData[playNum].pic);
 }
 
 </script>
