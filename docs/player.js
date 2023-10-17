@@ -275,7 +275,9 @@ Player.prototype = {
 let player;
 let playNum=0;
 let media="https://cdn.jsdelivr.net/gh/Meekdai/media@main/"
-let requestJson="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/memp.json"
+// let requestJson="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/memp.json"
+let requestJson="https://music.meekdai.com/memp.json"
+
 let request=new XMLHttpRequest();
 request.open("GET",requestJson);
 request.responseType='text';
