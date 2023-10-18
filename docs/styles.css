@@ -246,6 +246,7 @@ body {
   font-weight: bold;
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
+  white-space:nowrap;
 }
 .list-song:hover {
   background-color: rgba(255, 255, 255, 0.1);
