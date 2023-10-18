@@ -19,7 +19,8 @@ var Player = function(playlist) {
   document.querySelector("body").style.backgroundImage = "url(" +media+ encodeURI(playlist[this.index].pic) + ")";
 
   // Setup the playlist display.
-  playlist.forEach(function(song) {
+
+  playlist.reverse().forEach(function(song) {
     var div = document.createElement('div');
     div.className = 'list-song';
     div.innerHTML = song.title;
@@ -140,7 +141,7 @@ Player.prototype = {
 
     // Get the next track based on the direction of the track.
     var index = 0;
-    if (direction === 'prev') {
+    if (direction === 'next') {
       index = self.index - 1;
       if (index < 0) {
         index = self.playlist.length - 1;
