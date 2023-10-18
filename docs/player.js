@@ -96,6 +96,7 @@ Player.prototype = {
     // Update the track display.
     // track.innerHTML = (index + 1) + '. ' + data.title;
     track.innerHTML = data.title;
+    document.title=data.title + " - Gmemp";//显示浏览器TAB栏内容
     document.querySelector("body").style.backgroundImage = "url(" +media+ encodeURI(data.pic) + ")";
 
     // Show the pause button.
