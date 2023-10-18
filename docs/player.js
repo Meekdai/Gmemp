@@ -20,9 +20,10 @@ var Player = function(playlist) {
 
   // Setup the playlist display.
 
-  playlist.reverse().forEach(function(song) {
+  playlist.forEach(function(song) {
     var div = document.createElement('div');
     div.className = 'list-song';
+    div.id = 'list-song-'+playlist.indexOf(song);
     div.innerHTML = song.title;
     div.onclick = function() {
       player.skipTo(playlist.indexOf(song));
@@ -100,6 +101,10 @@ Player.prototype = {
     document.title=data.title + " - Gmemp";//显示浏览器TAB栏内容
     document.querySelector("body").style.backgroundImage = "url(" +media+ encodeURI(data.pic) + ")";
     window.location.hash="#"+(index);
+
+    document.querySelector('#list-song-'+playNum).style.backgroundColor='';//清除上一首选中
+    document.querySelector('#list-song-'+index).style.backgroundColor='rgba(255, 255, 255, 0.1)';//高亮当前播放
+    playNum=index;
 
     // Show the pause button.
     if (sound.state() === 'loaded') {
@@ -236,6 +241,11 @@ Player.prototype = {
 
     setTimeout(function() {
       playlist.style.display = display;
+      if (playlist.style.display=='block'){ //滚动到当前播放歌曲
+        let [parentDoc,childDoc]= [list,document.querySelector('#list-song-'+playNum)];
+        parentDoc.scrollTop = childDoc.offsetTop - parentDoc.offsetHeight /2 ;
+      }
+
     }, (display === 'block') ? 0 : 500);
     playlist.className = (display === 'block') ? 'fadein' : 'fadeout';
   },
