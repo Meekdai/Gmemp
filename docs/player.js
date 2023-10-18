@@ -12,11 +12,11 @@ elms.forEach(function(elm) {
  */
 var Player = function(playlist) {
   this.playlist = playlist;
-  this.index = 0;
+  this.index = playNum;
 
   // Display the title of the first track.
-  track.innerHTML =  playlist[0].title;
-  document.querySelector("body").style.backgroundImage = "url(" +media+ encodeURI(playlist[0].pic) + ")";
+  track.innerHTML =  playlist[this.index].title;
+  document.querySelector("body").style.backgroundImage = "url(" +media+ encodeURI(playlist[this.index].pic) + ")";
 
   // Setup the playlist display.
   playlist.forEach(function(song) {
@@ -98,6 +98,7 @@ Player.prototype = {
     track.innerHTML = data.title;
     document.title=data.title + " - Gmemp";//显示浏览器TAB栏内容
     document.querySelector("body").style.backgroundImage = "url(" +media+ encodeURI(data.pic) + ")";
+    window.location.hash="#"+(index);
 
     // Show the pause button.
     if (sound.state() === 'loaded') {
@@ -277,6 +278,17 @@ request.send();
 request.onload=function(){
     jsonData=JSON.parse(request.response);
     console.log(jsonData);
+
+    if(window.location.hash!=''){
+      try{
+          playNum=parseInt(window.location.hash.slice(1));
+      }
+      catch{
+          playNum=jsonData.length-1 //默认最近添加的
+      }
+  }
+  else{playNum=jsonData.length-1} //默认最近添加的
+
     player = new Player(jsonData);
 }
 
