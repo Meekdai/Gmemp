@@ -5,6 +5,7 @@ elms.forEach(function(elm) {
   window[elm] = document.getElementById(elm);
 });
 
+
 /**
  * Player class containing the state of our playlist and where we are in it.
  * Includes all methods for playing, skipping, updating the display, etc.
@@ -50,7 +51,7 @@ Player.prototype = {
     } else {
       sound = data.howl = new Howl({
         src: [media + data.mp3],
-        html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
+        // html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
         onplay: function() {
           // Display the duration.
           duration.innerHTML = self.formatTime(Math.round(sound.duration()));
@@ -59,31 +60,31 @@ Player.prototype = {
           requestAnimationFrame(self.step.bind(self));
 
           // Start the wave animation if we have already loaded
-          wave.container.style.display = 'block';
-          bar.style.display = 'none';
+          // wave.container.style.display = 'block';
+          // bar.style.display = 'none';
           pauseBtn.style.display = 'block';
         },
         onload: function() {
           // Start the wave animation.
-          wave.container.style.display = 'block';
-          bar.style.display = 'none';
+          // wave.container.style.display = 'block';
+          // bar.style.display = 'none';
           loading.style.display = 'none';
         },
         onend: function() {
           // Stop the wave animation.
-          wave.container.style.display = 'none';
-          bar.style.display = 'block';
+          // wave.container.style.display = 'none';
+          // bar.style.display = 'block';
           self.skip('next');
         },
         onpause: function() {
           // Stop the wave animation.
-          wave.container.style.display = 'none';
-          bar.style.display = 'block';
+          // wave.container.style.display = 'none';
+          // bar.style.display = 'block';
         },
         onstop: function() {
           // Stop the wave animation.
-          wave.container.style.display = 'none';
-          bar.style.display = 'block';
+          // wave.container.style.display = 'none';
+          // bar.style.display = 'block';
         },
         onseek: function() {
           // Start updating the progress of the track.
@@ -105,6 +106,16 @@ Player.prototype = {
     document.querySelector('#list-song-'+playNum).style.backgroundColor='';//清除上一首选中
     document.querySelector('#list-song-'+index).style.backgroundColor='rgba(255, 255, 255, 0.1)';//高亮当前播放
     playNum=index;
+
+    this.analyser=Howler.ctx.createAnalyser();
+    this.analyser.fftSize = 256;
+    this.bufferLength = this.analyser.frequencyBinCount;
+    this.dataArray = new Uint8Array(this.bufferLength);
+    Howler.masterGain.connect(this.analyser);
+
+    //之后通过如下指令就可获取
+    // player.analyser.getByteFrequencyData(player.dataArray);
+    // player.analyser.getByteTimeDomainData(player.dataArray);
 
     // Show the pause button.
     if (sound.state() === 'loaded') {
@@ -364,31 +375,31 @@ volume.addEventListener('mousemove', move);
 volume.addEventListener('touchmove', move);
 
 // Setup the "waveform" animation.
-var wave = new SiriWave({
-  container: waveform,
-  width: window.innerWidth,
-  height: window.innerHeight * 0.3,
-  cover: true,
-  speed: 0.03,
-  amplitude: 0.7,
-  frequency: 2
-});
-wave.start();
+// var wave = new SiriWave({
+//   container: waveform,
+//   width: window.innerWidth,
+//   height: window.innerHeight * 0.3,
+//   cover: true,
+//   speed: 0.03,
+//   amplitude: 0.7,
+//   frequency: 2
+// });
+// wave.start();
 
 // Update the height of the wave animation.
 // These are basically some hacks to get SiriWave.js to do what we want.
 var resize = function() {
-  var height = window.innerHeight * 0.3;
-  var width = window.innerWidth;
-  wave.height = height;
-  wave.height_2 = height / 2;
-  wave.MAX = wave.height_2 - 4;
-  wave.width = width;
-  wave.width_2 = width / 2;
-  wave.width_4 = width / 4;
-  wave.canvas.height = height;
-  wave.canvas.width = width;
-  wave.container.style.margin = -(height / 2) + 'px auto';
+  // var height = window.innerHeight * 0.3;
+  // var width = window.innerWidth;
+  // wave.height = height;
+  // wave.height_2 = height / 2;
+  // wave.MAX = wave.height_2 - 4;
+  // wave.width = width;
+  // wave.width_2 = width / 2;
+  // wave.width_4 = width / 4;
+  // wave.canvas.height = height;
+  // wave.canvas.width = width;
+  // wave.container.style.margin = -(height / 2) + 'px auto';
 
   // Update the position of the slider.
   // var sound = player.playlist[player.index].howl;
@@ -401,3 +412,50 @@ var resize = function() {
 };
 window.addEventListener('resize', resize);
 resize();
+
+
+
+
+
+function draw() {
+  let HEIGHT = window.innerHeight * 0.3;
+  let WIDTH = window.innerWidth;
+
+  let c=document.getElementById("myCanvas");
+  var canvasCtx=c.getContext("2d");
+  canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+
+  drawVisual = requestAnimationFrame(draw);
+
+  player.analyser.getByteFrequencyData(player.dataArray);
+
+  canvasCtx.fillStyle = "rgb(0, 0, 0)";
+  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+
+  const barWidth = (WIDTH / player.bufferLength) * 2.5;
+  let barHeight;
+  let x = 0;
+
+  for (let i = 0; i < player.bufferLength; i++) {
+    barHeight = player.dataArray[i] / 2;
+
+    canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
+    canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight);
+
+    x += barWidth + 1;
+  }
+}
+
+draw()
+
+// Create an analyser node in the Howler WebAudio context
+// let analyser = Howler.ctx.createAnalyser();
+// Connect the masterGain -> analyser (disconnecting masterGain -> destination)
+// Howler.masterGain.connect(analyser);
+
+// Howler.masterGain.disconnect();
+// level = Howler.ctx.createGain();
+// Howler.masterGain.connect(level);
+// level.gain.setValueAtTime(levelValue, Howler.ctx.currentTime);
+// level.connect(Howler.ctx.destination);
+
