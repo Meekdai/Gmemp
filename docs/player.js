@@ -120,6 +120,9 @@ Player.prototype = {
     document.title=data.title + " - Gmemp";//显示浏览器TAB栏内容
     document.querySelector("body").style.backgroundImage = "url('" +media+ encodeURI(data.pic) + "')";
     window.location.hash="#"+(index);
+    
+    //progressBar 垂直居中
+    progressBar.style.margin = -(window.innerHeight*0.3/2)+'px auto'
 
     document.querySelector('#list-song-'+playNum).style.backgroundColor='';//清除上一首选中
     document.querySelector('#list-song-'+index).style.backgroundColor='rgba(255, 255, 255, 0.1)';//高亮当前播放

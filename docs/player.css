@@ -59,6 +59,7 @@ body {
 }
 #post {
   text-align:left;
+  line-height: 18px;
   margin-top: 20px;
   padding:20px;
   font-size: 18px;
@@ -348,6 +349,6 @@ body {
 
 @media screen and (max-width: 600px) {
 #track{display: none;}
-#postBtn{display: none;}
-#waveBtn{display: none;}
+#postBtn{left:5%;margin: -80px auto;}
+#waveBtn{right:5%;margin: -80px auto;}
 }
