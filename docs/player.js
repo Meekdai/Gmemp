@@ -16,7 +16,8 @@ let Player = function(playlist) {
 
   // Display the title of the first track.
   track.innerHTML =  playlist[this.index].title;
-  document.querySelector("body").style.backgroundImage = "url(" +media+ encodeURI(playlist[this.index].pic) + ")";
+  document.querySelector("body").style.backgroundImage = "url('" +media+ encodeURI(playlist[this.index].pic) + "')";
+  console.log("url(" +media+ encodeURI(playlist[this.index].pic) + ")");
   post.innerHTML = playlist[this.index].article;
 
   // Setup the playlist display.
@@ -93,7 +94,7 @@ Player.prototype = {
     track.innerHTML = data.title;
     post.innerHTML = data.article;
     document.title=data.title + " - Gmemp";//显示浏览器TAB栏内容
-    document.querySelector("body").style.backgroundImage = "url(" +media+ encodeURI(data.pic) + ")";
+    document.querySelector("body").style.backgroundImage = "url('" +media+ encodeURI(data.pic) + "')";
     window.location.hash="#"+(index);
 
     document.querySelector('#list-song-'+playNum).style.backgroundColor='';//清除上一首选中
