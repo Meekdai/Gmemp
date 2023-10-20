@@ -120,7 +120,7 @@ Player.prototype = {
     document.title=data.title + " - Gmemp";//显示浏览器TAB栏内容
     document.querySelector("body").style.backgroundImage = "url('" +media+ encodeURI(data.pic) + "')";
     window.location.hash="#"+(index);
-    
+
     //progressBar 垂直居中
     progressBar.style.margin = -(window.innerHeight*0.3/2)+'px auto'
 
@@ -404,4 +404,4 @@ function draw() {
   }
 }
 
-console.log("\n %c Gmemp v1.0 %c https://github.com/Meekdai/Gmemp \n", "color: #fff; background-image: linear-gradient(90deg, rgb(47, 172, 178) 0%, rgb(45, 190, 96) 100%); padding:5px 1px;", "background-image: linear-gradient(90deg, rgb(45, 190, 96) 0%, rgb(255, 255, 255) 100%); padding:5px 0;");
+console.log("\n %c Gmemp v1.1 %c https://github.com/Meekdai/Gmemp \n", "color: #fff; background-image: linear-gradient(90deg, rgb(47, 172, 178) 0%, rgb(45, 190, 96) 100%); padding:5px 1px;", "background-image: linear-gradient(90deg, rgb(45, 190, 96) 0%, rgb(255, 255, 255) 100%); padding:5px 0;");
