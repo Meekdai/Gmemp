@@ -1,10 +1,9 @@
 
 // Cache references to DOM elements.
-let elms = ['track', 'timer', 'duration','post', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', "postBtn", 'volumeBtn', 'progress', 'progressBar', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
+let elms = ['track', 'timer', 'duration','post', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', 'postBtn', 'waveBtn', 'volumeBtn', 'progress', 'progressBar','waveCanvas', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
 elms.forEach(function(elm) {
   window[elm] = document.getElementById(elm);
 });
-
 
 /**
  * Player class containing the state of our playlist and where we are in it.
@@ -18,10 +17,9 @@ let Player = function(playlist) {
   // Display the title of the first track.
   track.innerHTML =  playlist[this.index].title;
   document.querySelector("body").style.backgroundImage = "url(" +media+ encodeURI(playlist[this.index].pic) + ")";
-  post.style.display="none";
   post.innerHTML = playlist[this.index].article;
-  // Setup the playlist display.
 
+  // Setup the playlist display.
   playlist.forEach(function(song) {
     let div = document.createElement('div');
     div.className = 'list-song';
@@ -61,34 +59,24 @@ Player.prototype = {
           requestAnimationFrame(self.step.bind(self));
 
           // Start the wave animation if we have already loaded
-          // wave.container.style.display = 'block';
-          // bar.style.display = 'none';
           progressBar.style.display = 'block';
           pauseBtn.style.display = 'block';
         },
         onload: function() {
           // Start the wave animation.
-          // wave.container.style.display = 'block';
-          // bar.style.display = 'none';
           progressBar.style.display = 'block';
           loading.style.display = 'none';
         },
         onend: function() {
           // Stop the wave animation.
-          // wave.container.style.display = 'none';
-          // bar.style.display = 'block';
           self.skip('next');
         },
         onpause: function() {
           // Stop the wave animation.
-          // wave.container.style.display = 'none';
-          // bar.style.display = 'block';
           progressBar.style.display = 'none';
         },
         onstop: function() {
           // Stop the wave animation.
-          // wave.container.style.display = 'none';
-          // bar.style.display = 'block';
           progressBar.style.display = 'none';
         },
         onseek: function() {
@@ -111,17 +99,14 @@ Player.prototype = {
     document.querySelector('#list-song-'+playNum).style.backgroundColor='';//清除上一首选中
     document.querySelector('#list-song-'+index).style.backgroundColor='rgba(255, 255, 255, 0.1)';//高亮当前播放
     playNum=index;
-
+    
+    //https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
     this.analyser=Howler.ctx.createAnalyser();
     this.analyser.fftSize = 256;
     this.bufferLength = this.analyser.frequencyBinCount;
     this.dataArray = new Uint8Array(this.bufferLength);
     Howler.masterGain.connect(this.analyser);
     draw();
-
-    //之后通过如下指令就可获取
-    // player.analyser.getByteFrequencyData(player.dataArray);
-    // player.analyser.getByteTimeDomainData(player.dataArray);
 
     // Show the pause button.
     if (sound.state() === 'loaded') {
@@ -137,9 +122,7 @@ Player.prototype = {
     self.index = index;
   },
 
-  /**
-   * Pause the currently playing track.
-   */
+  //暂停
   pause: function() {
     let self = this;
 
@@ -249,9 +232,7 @@ Player.prototype = {
     }
   },
 
-  /**
-   * Toggle the playlist display on/off.
-   */
+  //是否显示歌曲列表
   togglePlaylist: function() {
     let self = this;
     let display = (playlist.style.display === 'block') ? 'none' : 'block';
@@ -271,6 +252,12 @@ Player.prototype = {
   togglePost: function() {
     if(post.style.display=="none"){post.style.display="block";}
     else{post.style.display="none";}
+  },
+
+  //是否显示频率
+  toggleWave: function() {
+    if(waveCanvas.style.display=="none"){waveCanvas.style.display="block";}
+    else{waveCanvas.style.display="none";}
   },
 
   /**
@@ -351,6 +338,9 @@ playlist.addEventListener('click', function() {
 postBtn.addEventListener('click', function() {
   player.togglePost();
 });
+waveBtn.addEventListener('click', function() {
+  player.toggleWave();
+});
 volumeBtn.addEventListener('click', function() {
   player.toggleVolume();
 });
@@ -389,55 +379,13 @@ let move = function(event) {
 volume.addEventListener('mousemove', move);
 volume.addEventListener('touchmove', move);
 
-// Setup the "waveform" animation.
-// let wave = new SiriWave({
-//   container: waveform,
-//   width: window.innerWidth,
-//   height: window.innerHeight * 0.3,
-//   cover: true,
-//   speed: 0.03,
-//   amplitude: 0.7,
-//   frequency: 2
-// });
-// wave.start();
-
-// Update the height of the wave animation.
-// These are basically some hacks to get SiriWave.js to do what we want.
-let resize = function() {
-  // let height = window.innerHeight * 0.3;
-  // let width = window.innerWidth;
-  // wave.height = height;
-  // wave.height_2 = height / 2;
-  // wave.MAX = wave.height_2 - 4;
-  // wave.width = width;
-  // wave.width_2 = width / 2;
-  // wave.width_4 = width / 4;
-  // wave.canvas.height = height;
-  // wave.canvas.width = width;
-  // wave.container.style.margin = -(height / 2) + 'px auto';
-
-  // Update the position of the slider.
-  // let sound = player.playlist[player.index].howl;
-  let sound = null;
-  if (sound) {
-    let vol = sound.volume();
-    let barWidth = (vol * 0.9);
-    sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 25) + 'px';
-  }
-};
-window.addEventListener('resize', resize);
-resize();
-
-
-
-let c=document.getElementById("waveCanvas");
-let canvasCtx=c.getContext("2d");
+let canvasCtx=waveCanvas.getContext("2d");
 
 function draw() {
   let HEIGHT = window.innerHeight;
   let WIDTH = window.innerWidth;
-  c.setAttribute('width', WIDTH);
-  c.setAttribute('height', HEIGHT);
+  waveCanvas.setAttribute('width', WIDTH);
+  waveCanvas.setAttribute('height', HEIGHT);
 
   canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
   drawVisual = requestAnimationFrame(draw);
@@ -461,16 +409,3 @@ function draw() {
     x += barWidth + 1;
   }
 }
-
-
-// Create an analyser node in the Howler WebAudio context
-// let analyser = Howler.ctx.createAnalyser();
-// Connect the masterGain -> analyser (disconnecting masterGain -> destination)
-// Howler.masterGain.connect(analyser);
-
-// Howler.masterGain.disconnect();
-// level = Howler.ctx.createGain();
-// Howler.masterGain.connect(level);
-// level.gain.setValueAtTime(levelValue, Howler.ctx.currentTime);
-// level.connect(Howler.ctx.destination);
-
