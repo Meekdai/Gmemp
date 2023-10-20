@@ -1,6 +1,6 @@
 
 // Cache references to DOM elements.
-let elms = ['track', 'timer', 'duration', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', 'volumeBtn', 'progress', 'bar', 'wave', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
+let elms = ['track', 'timer', 'duration', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', 'volumeBtn', 'progress', 'progressBar', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
 elms.forEach(function(elm) {
   window[elm] = document.getElementById(elm);
 });
@@ -62,12 +62,14 @@ Player.prototype = {
           // Start the wave animation if we have already loaded
           // wave.container.style.display = 'block';
           // bar.style.display = 'none';
+          progressBar.style.display = 'block';
           pauseBtn.style.display = 'block';
         },
         onload: function() {
           // Start the wave animation.
           // wave.container.style.display = 'block';
           // bar.style.display = 'none';
+          progressBar.style.display = 'block';
           loading.style.display = 'none';
         },
         onend: function() {
@@ -80,11 +82,13 @@ Player.prototype = {
           // Stop the wave animation.
           // wave.container.style.display = 'none';
           // bar.style.display = 'block';
+          progressBar.style.display = 'none';
         },
         onstop: function() {
           // Stop the wave animation.
           // wave.container.style.display = 'none';
           // bar.style.display = 'block';
+          progressBar.style.display = 'none';
         },
         onseek: function() {
           // Start updating the progress of the track.
@@ -328,7 +332,7 @@ prevBtn.addEventListener('click', function() {
 nextBtn.addEventListener('click', function() {
   player.skip('next');
 });
-waveform.addEventListener('click', function(event) {
+progressBar.addEventListener('click', function(event) {
   player.seek(event.clientX / window.innerWidth);
 });
 playlistBtn.addEventListener('click', function() {
