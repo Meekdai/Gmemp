@@ -1,6 +1,6 @@
 
 // Cache references to DOM elements.
-let elms = ['track', 'timer', 'duration', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', 'volumeBtn', 'progress', 'progressBar', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
+let elms = ['track', 'timer', 'duration','post', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', "postBtn", 'volumeBtn', 'progress', 'progressBar', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
 elms.forEach(function(elm) {
   window[elm] = document.getElementById(elm);
 });
@@ -18,7 +18,8 @@ let Player = function(playlist) {
   // Display the title of the first track.
   track.innerHTML =  playlist[this.index].title;
   document.querySelector("body").style.backgroundImage = "url(" +media+ encodeURI(playlist[this.index].pic) + ")";
-
+  post.style.display="none";
+  post.innerHTML = playlist[this.index].article;
   // Setup the playlist display.
 
   playlist.forEach(function(song) {
@@ -101,8 +102,8 @@ Player.prototype = {
     sound.play();
 
     // Update the track display.
-    // track.innerHTML = (index + 1) + '. ' + data.title;
     track.innerHTML = data.title;
+    post.innerHTML = data.article;
     document.title=data.title + " - Gmemp";//显示浏览器TAB栏内容
     document.querySelector("body").style.backgroundImage = "url(" +media+ encodeURI(data.pic) + ")";
     window.location.hash="#"+(index);
@@ -266,6 +267,12 @@ Player.prototype = {
     playlist.className = (display === 'block') ? 'fadein' : 'fadeout';
   },
 
+  //是否显示文章
+  togglePost: function() {
+    if(post.style.display=="none"){post.style.display="block";}
+    else{post.style.display="none";}
+  },
+
   /**
    * Toggle the volume display on/off.
    */
@@ -340,6 +347,9 @@ playlistBtn.addEventListener('click', function() {
 });
 playlist.addEventListener('click', function() {
   player.togglePlaylist();
+});
+postBtn.addEventListener('click', function() {
+  player.togglePost();
 });
 volumeBtn.addEventListener('click', function() {
   player.toggleVolume();
