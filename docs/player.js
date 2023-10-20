@@ -5,6 +5,33 @@ elms.forEach(function(elm) {
   window[elm] = document.getElementById(elm);
 });
 
+let player;
+let playNum=0;
+let media="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/media/"
+let requestJson="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/docs/memp.json"
+// let requestJson="https://music.meekdai.com/memp.json"
+
+let request=new XMLHttpRequest();
+request.open("GET",requestJson);
+request.responseType='text';
+request.send();
+request.onload=function(){
+    jsonData=JSON.parse(request.response);
+    console.log(jsonData);
+
+    if(window.location.hash!=''){
+      try{
+          playNum=parseInt(window.location.hash.slice(1));
+      }
+      catch{
+          playNum=jsonData.length-1 //默认最近添加的
+      }
+  }
+  else{playNum=jsonData.length-1} //默认最近添加的
+
+    player = new Player(jsonData);
+}
+
 /**
  * Player class containing the state of our playlist and where we are in it.
  * Includes all methods for playing, skipping, updating the display, etc.
@@ -17,7 +44,6 @@ let Player = function(playlist) {
   // Display the title of the first track.
   track.innerHTML =  playlist[this.index].title;
   document.querySelector("body").style.backgroundImage = "url('" +media+ encodeURI(playlist[this.index].pic) + "')";
-  console.log("url(" +media+ encodeURI(playlist[this.index].pic) + ")");
   post.innerHTML = playlist[this.index].article;
 
   // Setup the playlist display.
@@ -280,33 +306,6 @@ Player.prototype = {
   }
 };
 
-let player;
-let playNum=0;
-let media="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/media/"
-// let requestJson="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/memp.json"
-let requestJson="https://music.meekdai.com/memp.json"
-
-let request=new XMLHttpRequest();
-request.open("GET",requestJson);
-request.responseType='text';
-request.send();
-request.onload=function(){
-    jsonData=JSON.parse(request.response);
-    console.log(jsonData);
-
-    if(window.location.hash!=''){
-      try{
-          playNum=parseInt(window.location.hash.slice(1));
-      }
-      catch{
-          playNum=jsonData.length-1 //默认最近添加的
-      }
-  }
-  else{playNum=jsonData.length-1} //默认最近添加的
-
-    player = new Player(jsonData);
-}
-
 // Bind our player controls.
 playBtn.addEventListener('click', function() {
   player.play();
@@ -403,3 +402,5 @@ function draw() {
     x += barWidth + 1;
   }
 }
+
+console.log("\n %c Gmemp v1.0 %c https://github.com/Meekdai/Gmemp \n", "color: #fff; background-image: linear-gradient(90deg, rgb(47, 172, 178) 0%, rgb(45, 190, 96) 100%); padding:5px 1px;", "background-image: linear-gradient(90deg, rgb(45, 190, 96) 0%, rgb(255, 255, 255) 100%); padding:5px 0;");

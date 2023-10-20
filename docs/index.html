@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel="icon" href="https://meekdai.com/favicon.svg">
   <title>Gmemp</title>
-  <link rel="stylesheet" href="./styles.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/docs/player.css"> -->
+  <link rel="stylesheet" href="./player.css">
 </head>
 <body>
-  <!-- Top Info -->
   <div id="title">
     <span id="track"></span>
     <div id="timer">0:00</div>
@@ -16,7 +16,6 @@
     <div id="post" style="display:none;"></div>
   </div>
   
-  <!-- Controls -->
   <div class="controlsOuter">
     <div class="controlsInner">
       <div id="loading"></div>
@@ -31,25 +30,22 @@
     <div class="btn" id="volumeBtn"></div>
   </div>
 
-  <!-- Progress -->
   <div id="progressBar"></div>
   <div id="progress"></div>
   <canvas id="waveCanvas"></canvas>
 
-  <!-- Playlist -->
   <div id="playlist">
     <div id="list"></div>
   </div>
 
-  <!-- Volume -->
   <div id="volume" class="fadeout">
     <div id="barFull" class="bar"></div>
     <div id="barEmpty" class="bar"></div>
     <div id="sliderBtn"></div>
   </div>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/howler@2.2.4/dist/howler.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/docs/player.js"></script> -->
   <script src="./player.js"></script>
 </body>
 </html>
