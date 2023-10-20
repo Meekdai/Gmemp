@@ -240,7 +240,7 @@ Player.prototype = {
 
     setTimeout(function() {
       playlist.style.display = display;
-      if (playlist.style.display=='block'){ //滚动到当前播放歌曲
+      if (playlist.style.display=='block'){ //滚动到当前播放歌曲的位置
         let [parentDoc,childDoc]= [list,document.querySelector('#list-song-'+playNum)];
         parentDoc.scrollTop = childDoc.offsetTop - parentDoc.offsetHeight /2 ;
       }
@@ -261,9 +261,7 @@ Player.prototype = {
     else{waveCanvas.style.display="none";}
   },
 
-  /**
-   * Toggle the volume display on/off.
-   */
+  //是否显示音量调节界面
   toggleVolume: function() {
     let self = this;
     let display = (volume.style.display === 'block') ? 'none' : 'block';
@@ -274,15 +272,10 @@ Player.prototype = {
     volume.className = (display === 'block') ? 'fadein' : 'fadeout';
   },
 
-  /**
-   * Format the time from seconds to M:SS.
-   * @param  {Number} secs Seconds to format.
-   * @return {String}      Formatted time.
-   */
+  //格式化时间为 M:SS.
   formatTime: function(secs) {
     let minutes = Math.floor(secs / 60) || 0;
     let seconds = (secs - minutes * 60) || 0;
-
     return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
   }
 };
@@ -404,7 +397,7 @@ function draw() {
     barHeight = player.dataArray[i];
 
     // canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
-    canvasCtx.fillStyle = 'rgba(0,0,0,0.5)';
+    canvasCtx.fillStyle = 'rgba(255,255,255,0.5)';
     canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight/2);
 
     x += barWidth + 1;
