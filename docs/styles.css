@@ -140,7 +140,7 @@ body {
   left: 0;
   top: 50%;
   margin: -15% auto;
-  /* display: none; */
+  display: none;
   cursor: pointer;
   opacity: 0.8;
   -webkit-user-select: none;
@@ -166,6 +166,12 @@ body {
   width: 0%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+#waveCanvas{
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: -1;
 }
 

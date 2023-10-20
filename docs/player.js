@@ -1,6 +1,6 @@
 
 // Cache references to DOM elements.
-var elms = ['track', 'timer', 'duration', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', 'volumeBtn', 'progress', 'bar', 'wave', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
+let elms = ['track', 'timer', 'duration', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', 'volumeBtn', 'progress', 'bar', 'wave', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
 elms.forEach(function(elm) {
   window[elm] = document.getElementById(elm);
 });
@@ -11,7 +11,7 @@ elms.forEach(function(elm) {
  * Includes all methods for playing, skipping, updating the display, etc.
  * @param {Array} playlist Array of objects with playlist song details ({title, file, howl}).
  */
-var Player = function(playlist) {
+let Player = function(playlist) {
   this.playlist = playlist;
   this.index = playNum;
 
@@ -22,7 +22,7 @@ var Player = function(playlist) {
   // Setup the playlist display.
 
   playlist.forEach(function(song) {
-    var div = document.createElement('div');
+    let div = document.createElement('div');
     div.className = 'list-song';
     div.id = 'list-song-'+playlist.indexOf(song);
     div.innerHTML = song.title;
@@ -38,11 +38,11 @@ Player.prototype = {
    * @param  {Number} index Index of the song in the playlist (leave empty to play the first or current).
    */
   play: function(index) {
-    var self = this;
-    var sound;
+    let self = this;
+    let sound;
 
     index = typeof index === 'number' ? index : self.index;
-    var data = self.playlist[index];
+    let data = self.playlist[index];
 
     // If we already loaded this track, use the current one.
     // Otherwise, setup and load a new Howl.
@@ -112,6 +112,7 @@ Player.prototype = {
     this.bufferLength = this.analyser.frequencyBinCount;
     this.dataArray = new Uint8Array(this.bufferLength);
     Howler.masterGain.connect(this.analyser);
+    draw();
 
     //之后通过如下指令就可获取
     // player.analyser.getByteFrequencyData(player.dataArray);
@@ -135,10 +136,10 @@ Player.prototype = {
    * Pause the currently playing track.
    */
   pause: function() {
-    var self = this;
+    let self = this;
 
     // Get the Howl we want to manipulate.
-    var sound = self.playlist[self.index].howl;
+    let sound = self.playlist[self.index].howl;
 
     // Puase the sound.
     sound.pause();
@@ -153,10 +154,10 @@ Player.prototype = {
    * @param  {String} direction 'next' or 'prev'.
    */
   skip: function(direction) {
-    var self = this;
+    let self = this;
 
     // Get the next track based on the direction of the track.
-    var index = 0;
+    let index = 0;
     if (direction === 'next') {
       index = self.index - 1;
       if (index < 0) {
@@ -177,7 +178,7 @@ Player.prototype = {
    * @param  {Number} index Index in the playlist.
    */
   skipTo: function(index) {
-    var self = this;
+    let self = this;
 
     // Stop the current track.
     if (self.playlist[self.index].howl) {
@@ -196,13 +197,13 @@ Player.prototype = {
    * @param  {Number} val Volume between 0 and 1.
    */
   volume: function(val) {
-    var self = this;
+    let self = this;
 
     // Update the global volume (affecting all Howls).
     Howler.volume(val);
 
     // Update the display on the slider.
-    var barWidth = (val * 90) / 100;
+    let barWidth = (val * 90) / 100;
     barFull.style.width = (barWidth * 100) + '%';
     sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 25) + 'px';
   },
@@ -212,10 +213,10 @@ Player.prototype = {
    * @param  {Number} per Percentage through the song to skip.
    */
   seek: function(per) {
-    var self = this;
+    let self = this;
 
     // Get the Howl we want to manipulate.
-    var sound = self.playlist[self.index].howl;
+    let sound = self.playlist[self.index].howl;
 
     // Convert the percent into a seek position.
     if (sound.playing()) {
@@ -227,13 +228,13 @@ Player.prototype = {
    * The step called within requestAnimationFrame to update the playback position.
    */
   step: function() {
-    var self = this;
+    let self = this;
 
     // Get the Howl we want to manipulate.
-    var sound = self.playlist[self.index].howl;
+    let sound = self.playlist[self.index].howl;
 
     // Determine our current seek position.
-    var seek = sound.seek() || 0;
+    let seek = sound.seek() || 0;
     timer.innerHTML = self.formatTime(Math.round(seek));
     progress.style.width = (((seek / sound.duration()) * 100) || 0) + '%';
 
@@ -247,8 +248,8 @@ Player.prototype = {
    * Toggle the playlist display on/off.
    */
   togglePlaylist: function() {
-    var self = this;
-    var display = (playlist.style.display === 'block') ? 'none' : 'block';
+    let self = this;
+    let display = (playlist.style.display === 'block') ? 'none' : 'block';
 
     setTimeout(function() {
       playlist.style.display = display;
@@ -265,8 +266,8 @@ Player.prototype = {
    * Toggle the volume display on/off.
    */
   toggleVolume: function() {
-    var self = this;
-    var display = (volume.style.display === 'block') ? 'none' : 'block';
+    let self = this;
+    let display = (volume.style.display === 'block') ? 'none' : 'block';
 
     setTimeout(function() {
       volume.style.display = display;
@@ -280,8 +281,8 @@ Player.prototype = {
    * @return {String}      Formatted time.
    */
   formatTime: function(secs) {
-    var minutes = Math.floor(secs / 60) || 0;
-    var seconds = (secs - minutes * 60) || 0;
+    let minutes = Math.floor(secs / 60) || 0;
+    let seconds = (secs - minutes * 60) || 0;
 
     return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
   }
@@ -345,7 +346,7 @@ volume.addEventListener('click', function() {
 
 // Setup the event listeners to enable dragging of volume slider.
 barEmpty.addEventListener('click', function(event) {
-  var per = event.layerX / parseFloat(barEmpty.scrollWidth);
+  let per = event.layerX / parseFloat(barEmpty.scrollWidth);
   player.volume(per);
 });
 sliderBtn.addEventListener('mousedown', function() {
@@ -361,12 +362,12 @@ volume.addEventListener('touchend', function() {
   window.sliderDown = false;
 });
 
-var move = function(event) {
+let move = function(event) {
   if (window.sliderDown) {
-    var x = event.clientX || event.touches[0].clientX;
-    var startX = window.innerWidth * 0.05;
-    var layerX = x - startX;
-    var per = Math.min(1, Math.max(0, layerX / parseFloat(barEmpty.scrollWidth)));
+    let x = event.clientX || event.touches[0].clientX;
+    let startX = window.innerWidth * 0.05;
+    let layerX = x - startX;
+    let per = Math.min(1, Math.max(0, layerX / parseFloat(barEmpty.scrollWidth)));
     player.volume(per);
   }
 };
@@ -375,7 +376,7 @@ volume.addEventListener('mousemove', move);
 volume.addEventListener('touchmove', move);
 
 // Setup the "waveform" animation.
-// var wave = new SiriWave({
+// let wave = new SiriWave({
 //   container: waveform,
 //   width: window.innerWidth,
 //   height: window.innerHeight * 0.3,
@@ -388,9 +389,9 @@ volume.addEventListener('touchmove', move);
 
 // Update the height of the wave animation.
 // These are basically some hacks to get SiriWave.js to do what we want.
-var resize = function() {
-  // var height = window.innerHeight * 0.3;
-  // var width = window.innerWidth;
+let resize = function() {
+  // let height = window.innerHeight * 0.3;
+  // let width = window.innerWidth;
   // wave.height = height;
   // wave.height_2 = height / 2;
   // wave.MAX = wave.height_2 - 4;
@@ -402,11 +403,11 @@ var resize = function() {
   // wave.container.style.margin = -(height / 2) + 'px auto';
 
   // Update the position of the slider.
-  // var sound = player.playlist[player.index].howl;
-  var sound = null;
+  // let sound = player.playlist[player.index].howl;
+  let sound = null;
   if (sound) {
-    var vol = sound.volume();
-    var barWidth = (vol * 0.9);
+    let vol = sound.volume();
+    let barWidth = (vol * 0.9);
     sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 25) + 'px';
   }
 };
@@ -415,38 +416,38 @@ resize();
 
 
 
-
+let c=document.getElementById("waveCanvas");
+let canvasCtx=c.getContext("2d");
 
 function draw() {
-  let HEIGHT = window.innerHeight * 0.3;
+  let HEIGHT = window.innerHeight;
   let WIDTH = window.innerWidth;
+  c.setAttribute('width', WIDTH);
+  c.setAttribute('height', HEIGHT);
 
-  let c=document.getElementById("myCanvas");
-  var canvasCtx=c.getContext("2d");
   canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
-
   drawVisual = requestAnimationFrame(draw);
 
   player.analyser.getByteFrequencyData(player.dataArray);
 
-  canvasCtx.fillStyle = "rgb(0, 0, 0)";
+  canvasCtx.fillStyle = "rgba(0,0,0,0)";
   canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-  const barWidth = (WIDTH / player.bufferLength) * 2.5;
+  const barWidth = (WIDTH / player.bufferLength);
   let barHeight;
   let x = 0;
 
   for (let i = 0; i < player.bufferLength; i++) {
-    barHeight = player.dataArray[i] / 2;
+    barHeight = player.dataArray[i];
 
-    canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
-    canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight);
+    // canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
+    canvasCtx.fillStyle = 'rgba(0,0,0,0.5)';
+    canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight/2);
 
     x += barWidth + 1;
   }
 }
 
-draw()
 
 // Create an analyser node in the Howler WebAudio context
 // let analyser = Howler.ctx.createAnalyser();
