@@ -42,14 +42,14 @@ let Player = function(playlist) {
   // Display the title of the first track.
   track.innerHTML =  playlist[this.index].title;
   document.querySelector("body").style.backgroundImage = "url('" +media+ encodeURI(playlist[this.index].pic) + "')";
-  post.innerHTML = playlist[this.index].article;
+  post.innerHTML = '<p><b>'+playlist[this.index].date+'</b></p>' + playlist[this.index].article;
 
   // Setup the playlist display.
   playlist.forEach(function(song) {
     let div = document.createElement('div');
     div.className = 'list-song';
     div.id = 'list-song-'+playlist.indexOf(song);
-    div.innerHTML = song.title;
+    div.innerHTML = song.title + ' - ' + song.artist;
     div.onclick = function() {
       player.skipTo(playlist.indexOf(song));
     };
@@ -116,7 +116,7 @@ Player.prototype = {
 
     // Update the track display.
     track.innerHTML = data.title;
-    post.innerHTML = data.article;
+    post.innerHTML = '<p><b>'+data.date+'</b></p>'+data.article;
     document.title=data.title + " - Gmemp";//显示浏览器TAB栏内容
     document.querySelector("body").style.backgroundImage = "url('" +media+ encodeURI(data.pic) + "')";
     window.location.hash="#"+(index);
