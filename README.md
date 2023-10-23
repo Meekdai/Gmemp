@@ -7,13 +7,13 @@
 ![Gmemp](img/demo.jpg)
 
 ### 文件说明
-1. `docs`文件夹为页面展示html/js/css，上传到自己的静态服务器，`memp.json`文件为歌曲列表，修改为自己的内容即可。
+1. `docs`文件夹为页面展示html/js/css，`memp.json`文件为歌曲列表。
 2. `media`文件夹存放歌曲和背景图片，对应`memp.json`内的`pic`和`mp3`字段。
 3. `img`文件夹存放`readme.md`展示用图片。
 
 ### 安装
-1. 下载源码，修改`docs/memp.json`文件内容为自己的内容，修改`media`文件内的歌曲和图片和`docs/memp.json`对应。
-2. 修改`docs/player.js`的第一行`media`变量的地址，指向自己的`media`文件夹地址，为了加速我指向的CDN`jsdelivr`的地址。
+1. 修改`docs/memp.json`为自己的内容，修改`media`文件内的歌曲和图片和`docs/memp.json`对应。
+2. 修改`docs/player.js`的第一行`media`变量的地址，指向自己的`media`文件夹地址。为了加速我指向了`CDN`的地址。
 3. 上传源码到自己的`Github Pages`或者静态服务器即可。
 
 ### 鸣谢
