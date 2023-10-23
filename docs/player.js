@@ -1,7 +1,7 @@
 let media="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/media/"
 
 // Cache references to DOM elements.
-let elms = ['track', 'timer', 'duration','post', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', 'postBtn', 'waveBtn', 'volumeBtn', 'progress', 'progressBar','waveCanvas', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
+let elms = ['track','artist', 'timer', 'duration','post', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', 'postBtn', 'waveBtn', 'volumeBtn', 'progress', 'progressBar','waveCanvas', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
 elms.forEach(function(elm) {
   window[elm] = document.getElementById(elm);
 });
@@ -43,6 +43,7 @@ let Player = function(playlist) {
 
   // Display the title of the first track.
   track.innerHTML =  playlist[this.index].title;
+  artist.innerHTML =  playlist[this.index].artist;
   document.querySelector("body").style.backgroundImage = "url('" +media+ encodeURI(playlist[this.index].pic) + "')";
   post.innerHTML = '<p><b>'+playlist[this.index].date+'</b></p>' + playlist[this.index].article;
 
@@ -118,6 +119,7 @@ Player.prototype = {
 
     // Update the track display.
     track.innerHTML = data.title;
+    artist.innerHTML =  data.artist;
     post.innerHTML = '<p><b>'+data.date+'</b></p>'+data.article;
     document.title=data.title + " - Gmemp";//显示浏览器TAB栏内容
     document.querySelector("body").style.backgroundImage = "url('" +media+ encodeURI(data.pic) + "')";
