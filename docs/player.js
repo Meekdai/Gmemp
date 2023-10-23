@@ -1,3 +1,5 @@
+let media="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/media/"
+
 // Cache references to DOM elements.
 let elms = ['track', 'timer', 'duration','post', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', 'postBtn', 'waveBtn', 'volumeBtn', 'progress', 'progressBar','waveCanvas', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
 elms.forEach(function(elm) {
@@ -6,8 +8,8 @@ elms.forEach(function(elm) {
 
 let player;
 let playNum=0;
-let media="https://cdn.jsdelivr.net/gh/Meekdai/Gmemp@main/media/"
-let requestJson="https://music.meekdai.com/memp.json"
+let requestJson="memp.json"
+// let requestJson="https://music.meekdai.com/memp.json"
 
 let request=new XMLHttpRequest();
 request.open("GET",requestJson);
