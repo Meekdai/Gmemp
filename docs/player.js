@@ -46,6 +46,7 @@ let Player = function(playlist) {
   artist.innerHTML =  playlist[this.index].artist;
   document.querySelector("body").style.backgroundImage = "url('" +media+ encodeURI(playlist[this.index].pic) + "')";
   post.innerHTML = '<p><b>'+playlist[this.index].date+'</b></p>' + playlist[this.index].article;
+  document.querySelector('meta[property="og:image"]').setAttribute('content', media+ encodeURI(playlist[this.index].pic));
 
   // Setup the playlist display.
   playlist.forEach(function(song) {
@@ -124,6 +125,10 @@ Player.prototype = {
     document.title=data.title + " - Gmemp";//显示浏览器TAB栏内容
     document.querySelector("body").style.backgroundImage = "url('" +media+ encodeURI(data.pic) + "')";
     window.location.hash="#"+(index);
+
+    document.querySelector('meta[property="og:title"]').setAttribute('content', data.title);
+    document.querySelector('meta[property="og:url"]').setAttribute('content', window.location.href);
+    document.querySelector('meta[property="og:image"]').setAttribute('content', media+ encodeURI(data.pic));
 
     //progressBar 垂直居中
     progressBar.style.margin = -(window.innerHeight*0.3/2)+'px auto'
