@@ -127,6 +127,7 @@ Player.prototype = {
     window.location.hash="#"+(index);
 
     document.querySelector('meta[property="og:title"]').setAttribute('content', data.title);
+    document.querySelector('meta[property="og:description"]').setAttribute('content', data.article);
     document.querySelector('meta[property="og:url"]').setAttribute('content', window.location.href);
     document.querySelector('meta[property="og:image"]').setAttribute('content', media+ encodeURI(data.pic));
 
