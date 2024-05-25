@@ -414,4 +414,19 @@ function draw() {
   }
 }
 
+
+document.addEventListener('keyup', function(event) {
+  console.log(event.key);
+  if (event.key == ' ' || event.key == "MediaPlayPause"){
+    if(pauseBtn.style.display == 'none' || pauseBtn.style.display=="") {player.play();}
+    else {player.pause();}
+  }
+  else if(event.key == "MediaTrackNext"){player.skip('next');}
+  else if(event.key == "MediaTrackPrevious"){player.skip('prev');}
+  else if(event.key == "l"|| event.key === "L"){player.togglePlaylist();}
+  else if(event.key == "p"|| event.key === "P"){player.togglePost();}
+  else if(event.key == "w"|| event.key === "W"){player.toggleWave();}
+  else if(event.key == "v"|| event.key === "V"){player.toggleVolume();}
+});
+
 console.log("\n %c Gmemp v3.1 %c https://github.com/Meekdai/Gmemp \n", "color: #fff; background-image: linear-gradient(90deg, rgb(47, 172, 178) 0%, rgb(45, 190, 96) 100%); padding:5px 1px;", "background-image: linear-gradient(90deg, rgb(45, 190, 96) 0%, rgb(255, 255, 255) 100%); padding:5px 0;");
