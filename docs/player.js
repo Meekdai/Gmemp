@@ -140,7 +140,7 @@ Player.prototype = {
     
     //https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
     this.analyser=Howler.ctx.createAnalyser();
-    this.analyser.fftSize = 256;
+    this.analyser.fftSize = Math.pow(2, Math.floor(Math.log2((window.innerWidth / 15) * 2)));
     this.bufferLength = this.analyser.frequencyBinCount;
     this.dataArray = new Uint8Array(this.bufferLength);
     Howler.masterGain.connect(this.analyser);
