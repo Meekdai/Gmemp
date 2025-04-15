@@ -118,6 +118,23 @@ Player.prototype = {
     // Begin playing the sound.
     sound.play();
 
+    // If we are using the Media Session API, set up the metadata and actions.
+    if ('mediaSession' in navigator) {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: data.title,
+        artist: data.artist,
+        album: '',
+        artwork: [
+          { src: media + encodeURI(data.pic), sizes: '512x512', type: 'image/jpeg' }
+        ]
+      });
+    
+      navigator.mediaSession.setActionHandler('play', () => { sound.play(); });
+      navigator.mediaSession.setActionHandler('pause', () => { sound.pause(); });
+      navigator.mediaSession.setActionHandler('previoustrack', () => { self.skip('next'); });
+      navigator.mediaSession.setActionHandler('nexttrack', () => { self.skip('prev'); });
+    }
+
     // Update the track display.
     track.innerHTML = data.title;
     artist.innerHTML =  data.artist;
