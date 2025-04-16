@@ -133,13 +133,31 @@ Player.prototype = {
     
         navigator.mediaSession.setActionHandler('play', () => { sound.play(); });
         navigator.mediaSession.setActionHandler('pause', () => { sound.pause(); });
-        navigator.mediaSession.setActionHandler('previoustrack', () => { self.skip('next'); });
-        navigator.mediaSession.setActionHandler('nexttrack', () => { self.skip('prev'); });
+        navigator.mediaSession.setActionHandler('previoustrack', () => { self.skip('prev'); });
+        navigator.mediaSession.setActionHandler('nexttrack', () => { self.skip('next'); });
       };
     
       img.onload = () => {
-        const sizes = `${img.width}x${img.height}`;
-        applyMediaSession({src: artworkUrl,sizes,type: 'image/jpeg'});
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        const targetSize = 512;
+        canvas.width = targetSize;
+        canvas.height = targetSize;
+    
+        // 计算裁剪区域（居中裁剪）
+        const sourceSize = Math.min(img.width, img.height);
+        const sx = (img.width - sourceSize) / 2;
+        const sy = (img.height - sourceSize) / 2;
+    
+        // 绘制并裁剪图片
+        ctx.drawImage(img,sx, sy,sourceSize, sourceSize,0, 0,targetSize, targetSize);
+
+        // 转换为 Data URL（JPEG 格式，质量 90%）
+        const croppedUrl = canvas.toDataURL('image/jpeg', 0.9);
+    
+        // 传递给 MediaSession
+        applyMediaSession({src: croppedUrl,sizes: `${targetSize}x${targetSize}`,type: 'image/jpeg'});
       };
     
       img.onerror = (err) => {
@@ -147,6 +165,8 @@ Player.prototype = {
         applyMediaSession(null);
       };
     
+      // 开始加载原图
+      img.crossOrigin = 'Anonymous';
       img.src = artworkUrl;
     }
 
@@ -461,4 +481,4 @@ document.addEventListener('keyup', function(event) {
   else if(event.key == "v"|| event.key === "V"){player.toggleVolume();}
 });
 
-console.log("\n %c Gmemp v3.4.2 %c https://github.com/Meekdai/Gmemp \n", "color: #fff; background-image: linear-gradient(90deg, rgb(47, 172, 178) 0%, rgb(45, 190, 96) 100%); padding:5px 1px;", "background-image: linear-gradient(90deg, rgb(45, 190, 96) 0%, rgb(255, 255, 255) 100%); padding:5px 0;");
+console.log("\n %c Gmemp v3.4.3 %c https://github.com/Meekdai/Gmemp \n", "color: #fff; background-image: linear-gradient(90deg, rgb(47, 172, 178) 0%, rgb(45, 190, 96) 100%); padding:5px 1px;", "background-image: linear-gradient(90deg, rgb(45, 190, 96) 0%, rgb(255, 255, 255) 100%); padding:5px 0;");
