@@ -32,6 +32,10 @@ request.onload=function(){
     player = new Player(jsonData);
 }
 
+function isMobile() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
 /**
  * Player class containing the state of our playlist and where we are in it.
  * Includes all methods for playing, skipping, updating the display, etc.
@@ -79,7 +83,7 @@ Player.prototype = {
     } else {
       sound = data.howl = new Howl({
         src: [media + data.mp3],
-        html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
+        html5: isMobile(), // Force to HTML5 so that the audio can stream in (best for large files).
         onplay: function() {
           // Display the duration.
           duration.innerHTML = self.formatTime(Math.round(sound.duration()));
