@@ -123,9 +123,6 @@ Player.prototype = {
       const artworkUrl = media + encodeURI(data.pic);
       const img = new Image();
 
-      const placeholderUrl = "https://blog.meekdai.com/avatar512.jpg"; //占位图
-      applyMediaSession({src: placeholderUrl,sizes: "512x512",type: "image/jpeg",});
-
       const applyMediaSession = (artwork) => {
         navigator.mediaSession.metadata = new MediaMetadata({
           title: data.title,
@@ -139,7 +136,10 @@ Player.prototype = {
         navigator.mediaSession.setActionHandler('previoustrack', () => { self.skip('prev'); });
         navigator.mediaSession.setActionHandler('nexttrack', () => { self.skip('next'); });
       };
-    
+
+      //占位图
+      applyMediaSession({src: "https://blog.meekdai.com/avatar512.jpg",sizes: "512x512",type: "image/jpeg",}); 
+
       img.onload = () => {
         const canvas = document.createElement('canvas');
         const ctx = canvas.getContext('2d');
@@ -481,4 +481,4 @@ document.addEventListener('keyup', function(event) {
   else if(event.key == "v"|| event.key === "V"){player.toggleVolume();}
 });
 
-console.log("\n %c Gmemp v3.4.4 %c https://github.com/Meekdai/Gmemp \n", "color: #fff; background-image: linear-gradient(90deg, rgb(47, 172, 178) 0%, rgb(45, 190, 96) 100%); padding:5px 1px;", "background-image: linear-gradient(90deg, rgb(45, 190, 96) 0%, rgb(255, 255, 255) 100%); padding:5px 0;");
+console.log("\n %c Gmemp v3.4.5 %c https://github.com/Meekdai/Gmemp \n", "color: #fff; background-image: linear-gradient(90deg, rgb(47, 172, 178) 0%, rgb(45, 190, 96) 100%); padding:5px 1px;", "background-image: linear-gradient(90deg, rgb(45, 190, 96) 0%, rgb(255, 255, 255) 100%); padding:5px 0;");
