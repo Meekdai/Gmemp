@@ -131,8 +131,20 @@ Player.prototype = {
           artwork: artwork ? [artwork] : []
         });
     
-        navigator.mediaSession.setActionHandler('play', () => { sound.play(); });
-        navigator.mediaSession.setActionHandler('pause', () => { sound.pause(); });
+        navigator.mediaSession.setActionHandler('play', () => {
+          const sound = self.playlist[self.index].howl;
+          sound.play();
+          navigator.mediaSession.playbackState = 'playing';
+          playBtn.style.display = 'none';
+          pauseBtn.style.display = 'block';
+        });
+        navigator.mediaSession.setActionHandler('pause', () => {
+          const sound = self.playlist[self.index].howl;
+          sound.pause();
+          navigator.mediaSession.playbackState = 'paused';
+          playBtn.style.display = 'block';
+          pauseBtn.style.display = 'none';
+        });
         navigator.mediaSession.setActionHandler('previoustrack', () => { self.skip('prev'); });
         navigator.mediaSession.setActionHandler('nexttrack', () => { self.skip('next'); });
       };
@@ -481,4 +493,4 @@ document.addEventListener('keyup', function(event) {
   else if(event.key == "v"|| event.key === "V"){player.toggleVolume();}
 });
 
-console.log("\n %c Gmemp v3.4.6 %c https://github.com/Meekdai/Gmemp \n", "color: #fff; background-image: linear-gradient(90deg, rgb(47, 172, 178) 0%, rgb(45, 190, 96) 100%); padding:5px 1px;", "background-image: linear-gradient(90deg, rgb(45, 190, 96) 0%, rgb(255, 255, 255) 100%); padding:5px 0;");
+console.log("\n %c Gmemp v3.4.7 %c https://github.com/Meekdai/Gmemp \n", "color: #fff; background-image: linear-gradient(90deg, rgb(47, 172, 178) 0%, rgb(45, 190, 96) 100%); padding:5px 1px;", "background-image: linear-gradient(90deg, rgb(45, 190, 96) 0%, rgb(255, 255, 255) 100%); padding:5px 0;");
