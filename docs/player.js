@@ -118,21 +118,36 @@ Player.prototype = {
     // Begin playing the sound.
     sound.play();
 
-    // If we are using the Media Session API, set up the metadata and actions.
+    // 手机系统控制映射
     if ('mediaSession' in navigator) {
-      navigator.mediaSession.metadata = new MediaMetadata({
-        title: data.title,
-        artist: data.artist,
-        album: '',
-        artwork: [
-          { src: media + encodeURI(data.pic), sizes: '512x512', type: 'image/jpeg' }
-        ]
-      });
+      const artworkUrl = media + encodeURI(data.pic);
+      const img = new Image();
     
-      navigator.mediaSession.setActionHandler('play', () => { sound.play(); });
-      navigator.mediaSession.setActionHandler('pause', () => { sound.pause(); });
-      navigator.mediaSession.setActionHandler('previoustrack', () => { self.skip('next'); });
-      navigator.mediaSession.setActionHandler('nexttrack', () => { self.skip('prev'); });
+      const applyMediaSession = (artwork) => {
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: data.title,
+          artist: data.artist,
+          album: '',
+          artwork: artwork ? [artwork] : []
+        });
+    
+        navigator.mediaSession.setActionHandler('play', () => { sound.play(); });
+        navigator.mediaSession.setActionHandler('pause', () => { sound.pause(); });
+        navigator.mediaSession.setActionHandler('previoustrack', () => { self.skip('next'); });
+        navigator.mediaSession.setActionHandler('nexttrack', () => { self.skip('prev'); });
+      };
+    
+      img.onload = () => {
+        const sizes = `${img.width}x${img.height}`;
+        applyMediaSession({src: artworkUrl,sizes,type: 'image/jpeg'});
+      };
+    
+      img.onerror = (err) => {
+        console.warn('图片加载失败，跳过 artwork：', artworkUrl, err);
+        applyMediaSession(null);
+      };
+    
+      img.src = artworkUrl;
     }
 
     // Update the track display.
