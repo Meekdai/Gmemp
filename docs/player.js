@@ -79,7 +79,7 @@ Player.prototype = {
     } else {
       sound = data.howl = new Howl({
         src: [media + data.mp3],
-        // html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
+        html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
         onplay: function() {
           // Display the duration.
           duration.innerHTML = self.formatTime(Math.round(sound.duration()));
@@ -446,4 +446,4 @@ document.addEventListener('keyup', function(event) {
   else if(event.key == "v"|| event.key === "V"){player.toggleVolume();}
 });
 
-console.log("\n %c Gmemp v3.4 %c https://github.com/Meekdai/Gmemp \n", "color: #fff; background-image: linear-gradient(90deg, rgb(47, 172, 178) 0%, rgb(45, 190, 96) 100%); padding:5px 1px;", "background-image: linear-gradient(90deg, rgb(45, 190, 96) 0%, rgb(255, 255, 255) 100%); padding:5px 0;");
+console.log("\n %c Gmemp v3.4.1 %c https://github.com/Meekdai/Gmemp \n", "color: #fff; background-image: linear-gradient(90deg, rgb(47, 172, 178) 0%, rgb(45, 190, 96) 100%); padding:5px 1px;", "background-image: linear-gradient(90deg, rgb(45, 190, 96) 0%, rgb(255, 255, 255) 100%); padding:5px 0;");
